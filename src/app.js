@@ -3,8 +3,10 @@ const hbs = require("hbs")
 const app = express()
 
 const OpenAI = require('openai')
+require('dotenv').config()
+
 const openai = new OpenAI({
-  apiKey: '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',
+  apiKey: process.env.KEY,
 });
 
 const mongoose = require("mongoose")
@@ -154,10 +156,19 @@ app.post("/drugUses", async (req, res) => {
   const gptPrompt =
     "write uses of " + capitalizedDrugName + " in 50 words. -- generate in paragraph -- remember this is a medicine name";
 
-  const chatResponse = await openai.chat.completions.create({
-    messages: [{ role: 'user', content: gptPrompt }],
-    model: 'gpt-3.5-turbo',
-    // max_tokens: 50
+  try {
+    const chatResponse = await openai.chat.completions.create({
+      messages: [{ role: 'user', content: gptPrompt }],
+      model: 'gpt-3.5-turbo',
+      // max_tokens: 50
+    });
+  
+    const ans = chatResponse.choices[0].message.content;
+    res.render("drugUses", { ans, prompt });
+  } catch (error) {
+    const ans = "My Open AI API key has been blocked because I displayed it publicly. Sorry for the inconvenience."
+    res.render("drugUses", { ans, prompt });
+  }
   });
 
   const ans = chatResponse.choices[0].message.content;
