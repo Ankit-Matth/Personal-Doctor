@@ -1,2 +1,89 @@
 # Personal-Doctor
-Personal Doctor: An affordable platform connecting certified doctors to rural communities. We provide free or low-cost services as well as drug information for a holistic health care experience.
+
+In underserved regions where access to healthcare is limited, and in scenarios where individuals seek online medical consultations at minimal or no cost, Personal Doctor emerges as a solution. This platform acts as a bridge, facilitating interactions between users and certified healthcare professionals through online chat and audio-video calls. Moreover, it offers a valuable resource by providing information about various medicines and their uses.
+
+## Project Objectives
+
+### 1. Accessibility of Healthcare
+Personal Doctor addresses the challenge of limited access to quality healthcare in rural and underserved areas. By connecting patients with willing doctors for online consultations, we aim to make healthcare more accessible for minor problems and consultations.
+
+### 2. Information about Medicines
+To enhance patient understanding, Personal Doctor offers a comprehensive database of medications and their uses. Users can easily search for medications by name to gain insights into their purposes.
+
+## Technologies Used
+
+The project leverages the following technologies:
+
+- HTML
+- CSS
+- JavaScript
+- Bootstrap
+- Node.js
+- MongoDB
+- Express.js
+- ChatGPT (API)
+- Handlebars (.hbs)
+
+## Prerequisites & Installation Steps
+
+Follow these steps to set up the project on your local machine:
+
+### Cloning the Repository
+
+1. **Download Node.js:** Ensure you have the latest version of Node.js installed.
+2. **Clone the Repository:** Run the following command in your terminal:
+    ```bash
+    git clone https://github.com/Ankit-Matth/Personal-Doctor.git
+    ```
+
+3. **Navigate to the Project Directory:**
+    ```bash
+    cd Personal-Doctor
+    ```
+
+4. **Install Dependencies:**
+    ```bash
+    npm install
+    ```
+
+5. **Run the Application:**
+    ```bash
+    npm start
+    ```
+
+6. **View Output:**
+   Open your browser and go to [http://localhost:8089/](http://localhost:8089/) to see the output.
+
+7. **Development Mode:**
+    ```bash
+    npm run dev
+    ```
+   This command starts the project in development mode using nodemon.
+
+**Note:** The main backend code is located in the `app.js` file, serving as the core of our project. To run it directly, run the following command in your terminal:
+```bash
+node src/app.js
+```
+
+## Features provided by us
+
+### 1. Remote Access to Certified Doctors
+Bridging healthcare gaps for rural areas through seamless online consultations.
+
+### 2. Medicine Insights On-the-Go
+Access a comprehensive medication database for quick and easy understanding.
+
+### 3. Secure & User-Friendly Platform
+Experience a trustworthy space for online consultations with an intuitive and user-friendly navigation system.
+
+### 4. Real-time Chat & Video Calls
+Connect directly with certified doctors for personalized and real-time consultations.
+
+### 5. Transparent Payment Process
+Ensure secure transactions with our trusted partner, Cosmofeed, for worry-free financial interactions.
+
+### 6. Post-Consultation Ratings
+Promote accountability and transparency with our user-friendly rating system.
+
+### 7. Dedicated Customer Support
+Access 24/7 assistance for a seamless and reliable healthcare experience.
