@@ -67,23 +67,33 @@ node src/app.js
 
 ## Features provided by us
 
-### 1. Remote Access to Certified Doctors
-Bridging healthcare gaps for rural areas through seamless online consultations.
+1. **Remote Access to Certified Doctors:**
+   - Bridging healthcare gaps for rural areas through seamless online consultations.
 
-### 2. Medicine Insights On-the-Go
-Access a comprehensive medication database for quick and easy understanding.
+2. **Medicine Insights On-the-Go:**
+   - Access a comprehensive medication database for quick and easy understanding.
 
-### 3. Secure & User-Friendly Platform
-Experience a trustworthy space for online consultations with an intuitive and user-friendly navigation system.
+3. **Secure & User-Friendly Platform:**
+   - Experience a trustworthy space for online consultations with an intuitive and user-friendly navigation system.
 
-### 4. Real-time Chat & Video Calls
-Connect directly with certified doctors for personalized and real-time consultations.
+4. **Real-time Chat & Video Calls:**
+   - Connect directly with certified doctors for personalized and real-time consultations.
 
-### 5. Transparent Payment Process
-Ensure secure transactions with our trusted partner, Cosmofeed, for worry-free financial interactions.
+5. **Transparent Payment Process:**
+   - Ensure secure transactions with our trusted partner, Cosmofeed, for worry-free financial interactions.
 
-### 6. Post-Consultation Ratings
-Promote accountability and transparency with our user-friendly rating system.
+6. **Post-Consultation Ratings:**
+   - Promote accountability and transparency with our user-friendly rating system.
 
-### 7. Dedicated Customer Support
-Access 24/7 assistance for a seamless and reliable healthcare experience.
+7. **Dedicated Customer Support:**
+   - Access 24/7 assistance for a seamless and reliable healthcare experience.
+
+### Some popular screenshots of our platform  
+
+![forPatients](https://github.com/Ankit-Matth/Personal-Doctor/assets/146843890/3afcb266-4a35-49ca-8b6f-1e55c6460d2d)
+
+![forDoctors](https://github.com/Ankit-Matth/Personal-Doctor/assets/146843890/64000ab6-73da-41c2-b2e9-d1f9add91f4a)
+
+![page404](https://github.com/Ankit-Matth/Personal-Doctor/assets/146843890/1d70192c-d91d-4674-826f-23bc445fb342)
+
+![paracetamolUses](https://github.com/Ankit-Matth/Personal-Doctor/assets/146843890/6e5e9656-4762-444c-9839-fbb8c9c659ab)
