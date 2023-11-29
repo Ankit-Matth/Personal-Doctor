@@ -24,6 +24,15 @@ The project leverages the following technologies:
 - ChatGPT (API)
 - Handlebars (.hbs)
 
+### Test Users
+**Doctor**  
+ *Username* : Ravi,
+ *Password* : 12345  
+ 
+**Patient**  
+ *Username* : Amit,
+ *Password* : amit@789
+ 
 ## Prerequisites & Installation Steps
 
 Follow these steps to set up the project on your local machine:
