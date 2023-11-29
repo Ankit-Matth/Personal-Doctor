@@ -1,0 +1,253 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#logoIcon {
+    height: 10vh;
+}
+
+#logoIconHome {
+    margin-left: 12px;
+}
+
+.sticky-top {
+    box-shadow: 0px 2px 7px rgb(15, 15, 15);
+}
+
+#signUpbtn {
+    font-size: 13px;
+    padding: 3px 7px;
+    font-weight: bold;
+    margin-top: 5px;
+    background-color: rgb(12, 207, 12);
+    color: white;
+}
+
+#signUpbtn:hover {
+    background-color: rgba(12, 207, 12, 0.76);
+    color: black;
+    border: 2px solid gray;
+}
+
+.dropdown-item:hover {
+    font-weight: bold;
+    color: rgb(17, 196, 157) !important;
+}
+
+.nav-item:hover {
+    font-weight: bold;
+}
+
+.nav-link:hover {
+    color: rgb(17, 196, 157) !important;
+}
+
+/*For Footer  */
+#footer {
+    padding: 0 0 5px 0px;
+    color: white;
+    font-size: 14px;
+    margin-top: 5px;
+    background-color: #000000;
+}
+
+#footer .footer-top {
+    padding: 60px 0 30px 0;
+    color: white;
+    background-color: #000000;
+}
+
+#footer .footer-top .footer-contact {
+    margin-bottom: 30px;
+    margin-top: 10px;
+}
+
+#footer .footer-top .footer-contact h4 {
+    color: #ffc800;
+}
+
+#footer .footer-top .footer-contact p {
+    font-size: 14px;
+    line-height: 24px;
+    margin-bottom: 0;
+    color: white;
+}
+
+#footer .footer-top .footer-links {
+    margin-bottom: 30px;
+    margin-top: 10px;
+}
+
+#footer .footer-top .footer-links h4 {
+    color: #ffc800;
+}
+
+#footer .footer-top .footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#footer .footer-top .footer-links ul li {
+    padding: 8px 0;
+    display: flex;
+    align-items: center;
+}
+
+#footer .footer-top .footer-links ul li a {
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    line-height: 1;
+    font-weight: bold;
+    transition: 0.5s ease;
+}
+
+#footer .footer-top .footer-links ul li a:hover {
+    color: #ffc800;
+}
+
+#footer .footer-top .socail-links a {
+    font-size: 18px;
+    display: inline-block;
+    text-decoration: none;
+    background-color: #373737;
+    color: white;
+    line-height: 1;
+    padding: 8px 0;
+    margin-right: 4px;
+    border-radius: 50%;
+    text-align: center;
+    width: 36px;
+    transition: 0.5s ease;
+}
+
+#footer .footer-top .socail-links a:hover {
+    background-color: #ffc800;
+    color: white;
+}
+
+#footer .copyright {
+    text-align: center;
+    float: left;
+}
+
+#footer .credits {
+    float: right;
+    text-align: center;
+    font-size: 13px;
+}
+
+#footer .credits a {
+    color: #ffc800;
+}
+
+/* For Responsiveness */
+@media screen and (min-width: 995px) {
+    #navBarContent {
+        position: absolute;
+        right: 70px;
+    }
+
+    .nav-item {
+        margin-left: 30px;
+    }
+
+    .nav-link:hover {
+        border-bottom: 2px solid gray;
+        border-radius: 3px;
+        padding-bottom: 4px;
+        color: rgb(17, 196, 157) !important;
+    }
+}
+
+@media screen and (max-width: 995px) {
+    #navBarContent {
+        border: 1px solid gray;
+        border-radius: 1px;
+    }
+
+    .nav-item {
+        padding: 15px 20px;
+        border-bottom: 1px solid gray;
+    }
+
+    .nav-item:hover {
+        background-color: rgb(240, 240, 240);
+    }
+
+    .nav-link:hover {
+        color: rgb(17, 196, 157) !important;
+    }
+
+    #footer .footer-top {
+        padding-top: 45px;
+    }
+
+    #footer .footer-top .footer-contact {
+        margin-bottom: 16px;
+        margin-top: 7px;
+    }
+
+    #footer .footer-top .footer-links {
+        margin-bottom: 16px;
+        margin-top: 7px;
+    }
+}
+
+@media screen and (max-width: 595px) {
+    #logoIcon {
+        height: 8vh;
+    }
+
+    .nav-link:hover {
+        color: rgb(17, 196, 157) !important;
+    }
+
+    #footer .copyright {
+        float: none;
+        margin-bottom: 15px;
+    }
+
+    #footer .credits {
+        float: none;
+    }
+}
+
+@media screen and (max-width: 772px) {
+    #footer .footer-top .footer-contact {
+        margin-bottom: 26px;
+        margin-top: 7px;
+    }
+
+    #footer .footer-top .footer-links {
+        margin-bottom: 26px;
+        margin-top: 7px;
+    }
+}
+
+@media screen and (max-width: 485px) {
+    #logoIcon {
+        height: 6vh;
+    }
+
+    #logoIconHome {
+        font-size: 14px;
+        margin-left: 10px;
+    }
+
+    #toggleBtn {
+        font-size: 10px;
+    }
+
+    .nav-item {
+        padding: 15px 15px;
+        border-bottom: 1px solid gray;
+    }
+
+    .nav-link:hover {
+        color: rgb(17, 196, 157) !important;
+    }
+}

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Doctor Dashboard | Personal-Doctor</title>
+    <link rel="shortcut icon" href="/frontend/images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="/frontend/css/navbar.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" id="header">
+        <div class="container-fluid " style="background-color: #ffffff;"> <a class="navbar-brand" href="/frontend/index.html"><i class="fa-solid fa-house-medical" id="logoIconHome" style="color: #000000;"></i><img src="/frontend/images/Logo.png" id="logoIcon" alt="logo"></a> <button class="navbar-toggler" type="button" id="toggleBtn" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="navBarContent">
+                    <li class="nav-item"> <a class="nav-link active" aria-current="page" href="/frontend/index.html">Home</a> </li>
+                    <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Patients </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="/frontend/patients/searchDoctor.html">Search Doctor</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="/frontend/patients/yourAppointment.html">Your Appointments</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="/frontend/contact.html">Contact Us</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Doctors </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="/frontend/doctors/dashboard.html">Doctor Dashboard</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="/frontend/doctors/pendingRequests.html">Pending Requests</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="/frontend/doctors/doctorApplication.html">Doctor Application</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="/frontend/contact.html">Payment not received</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"> <a class="nav-link" href="/frontend/about.html">About</a> </li>
+                    <li class="nav-item"> <a href="/frontend/signup.html"><button type="submit" id="signUpbtn" class="btn btn-sm">SignUp</button></a> </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12 col-lg-4 col-xl-3 theiaStickySidebar">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="card-title mb-0 text-center p-3">Dr Ankit Matth</h4>
+                        </div>
+                        <div class="card-body">
+                            <div> <a class="btn btn-primary col-lg-12 m-1 p-2 px-3" href="/frontend/doctors/dashboard.html" style="text-align: left !important;">Doctor Dashboard</a> <a class="btn btn-primary col-lg-12 m-1 p-2 px-3" href="/frontend/doctors/pendingRequests.html" style="text-align: left !important;">Pending Requests</a> <a class="btn btn-primary col-lg-12 m-1 p-2 px-3" href="/frontend/doctors/doctorApplication.html" style="text-align: left !important;">Doctor Application</a> <a class="btn btn-primary col-lg-12 m-1 p-2 px-3" href="/frontend/contact.html" style="text-align: left !important;">Payment not received</a> </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 col-lg-8 col-xl-9">
+                    <div class="card m-3 bg-light p-3 text-center bg-dark text-white">
+                        <h1>Upcoming Appointments</h1>
+                    </div>
+                    <div class="card m-3 bg-dark p-2 px-4">
+                        <div class="carBody d-flex">
+                            <div class="col-lg-6 d-flex align-items-center p-3" style="justify-content: space-between;">
+                                <div class="details">
+                                    <h3 class="text-white">Ankit Matth</h3>
+                                    <div class="rating"> <i class="fa-solid fa-star" style="color: #f8d616;"></i> <i class="fa-solid fa-star" style="color: #f8d616;"></i> <i class="fa-solid fa-star" style="color: #f8d616;"></i> <i class="fa-solid fa-star" style="color: #f8d616;"></i> <i class="fa-solid fa-star-half-stroke" style="color: #f8d616;"></i> <span class="d-inline-block text-white">(35)</span> </div>
+                                </div>
+                                <div class="date"> <a href="#" class="btn btn-secondary">08 / 11 / 2023</a> </div>
+                            </div>
+                            <div class="col-lg-6 d-flex align-items-center" style="justify-content: space-between;">
+                                <div class="time"> <a href="#" class="btn btn-secondary">07:00 AM - 08:00 AM</a> </div>
+                                <div class="appointment-action"> <a href="#" class="btn btn-sm btn-outline-info mx-1" data-bs-toggle="modal" data-bs-target="#aboutModal"> <i class="far fa-eye"></i> View </a>
+                                    <div class="modal fade" id="aboutModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="aboutModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="aboutModalLabel">Details about problem...</h5> <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima nihil iusto tempora quis veniam, hic vel est asperiores inventore sed ullam, nobis quidem praesentium voluptatem unde qui excepturi. Quidem nostrum, possimus non cum voluptates, delectus a aperiam inventore facere fuga, iste sit deleniti reprehenderit. Animi expedita dolor corporis atque laboriosam!</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div> <a href="/frontend/doctors/doctorConsult.html" class="btn btn-sm btn-outline-success mx-1"> <i class="fa-regular fa-message"></i> Chat </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="px-3">
+                            <p style="color: rgb(194, 188, 188);">Note: Please start the meeting 5 minutes before the scheduled time.</p>
+                        </div>
+                    </div>
+                    <div class="card m-3 bg-dark p-2 px-4">
+                        <div class="carBody d-flex">
+                            <div class="col-lg-6 d-flex align-items-center p-3" style="justify-content: space-between;">
+                                <div class="details">
+                                    <h3 class="text-white">Ankit Matth</h3>
+                                    <div class="rating"> <i class="fa-solid fa-star" style="color: #f8d616;"></i> <i class="fa-solid fa-star" style="color: #f8d616;"></i> <i class="fa-solid fa-star" style="color: #f8d616;"></i> <i class="fa-solid fa-star" style="color: #f8d616;"></i> <i class="fa-solid fa-star-half-stroke" style="color: #f8d616;"></i> <span class="d-inline-block text-white">(35)</span> </div>
+                                </div>
+                                <div class="date"> <a href="#" class="btn btn-secondary">08 / 11 / 2023</a> </div>
+                            </div>
+                            <div class="col-lg-6 d-flex align-items-center" style="justify-content: space-between;">
+                                <div class="time"> <a href="#" class="btn btn-secondary">07:00 AM - 08:00 AM</a> </div>
+                                <div class="appointment-action"> <a href="#" class="btn btn-sm btn-outline-info mx-1" data-bs-toggle="modal" data-bs-target="#aboutModal"> <i class="far fa-eye"></i> View </a>
+                                    <div class="modal fade" id="aboutModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="aboutModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="aboutModalLabel">Details about problem...</h5> <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima nihil iusto tempora quis veniam, hic vel est asperiores inventore sed ullam, nobis quidem praesentium voluptatem unde qui excepturi. Quidem nostrum, possimus non cum voluptates, delectus a aperiam inventore facere fuga, iste sit deleniti reprehenderit. Animi expedita dolor corporis atque laboriosam!</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div> <a href="/frontend/doctors/doctorConsult.html" class="btn btn-sm btn-outline-success mx-1"> <i class="fa-regular fa-message"></i> Chat </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="px-3">
+                            <p style="color: rgb(194, 188, 188);">Note: Please start the meeting 5 minutes before the scheduled time.</p>
+                        </div>
+                    </div>
+                    <div class="card m-3 bg-dark p-2 px-4">
+                        <div class="carBody d-flex">
+                            <div class="col-lg-6 d-flex align-items-center p-3" style="justify-content: space-between;">
+                                <div class="details">
+                                    <h3 class="text-white">Ankit Matth</h3>
+                                    <div class="rating"> <i class="fa-solid fa-star" style="color: #f8d616;"></i> <i class="fa-solid fa-star" style="color: #f8d616;"></i> <i class="fa-solid fa-star" style="color: #f8d616;"></i> <i class="fa-solid fa-star" style="color: #f8d616;"></i> <i class="fa-solid fa-star-half-stroke" style="color: #f8d616;"></i> <span class="d-inline-block text-white">(35)</span> </div>
+                                </div>
+                                <div class="date"> <a href="#" class="btn btn-secondary">08 / 11 / 2023</a> </div>
+                            </div>
+                            <div class="col-lg-6 d-flex align-items-center" style="justify-content: space-between;">
+                                <div class="time"> <a href="#" class="btn btn-secondary">07:00 AM - 08:00 AM</a> </div>
+                                <div class="appointment-action"> <a href="#" class="btn btn-sm btn-outline-info mx-1" data-bs-toggle="modal" data-bs-target="#aboutModal"> <i class="far fa-eye"></i> View </a>
+                                    <div class="modal fade" id="aboutModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="aboutModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="aboutModalLabel">Details about problem...</h5> <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima nihil iusto tempora quis veniam, hic vel est asperiores inventore sed ullam, nobis quidem praesentium voluptatem unde qui excepturi. Quidem nostrum, possimus non cum voluptates, delectus a aperiam inventore facere fuga, iste sit deleniti reprehenderit. Animi expedita dolor corporis atque laboriosam!</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div> <a href="/frontend/doctors/doctorConsult.html" class="btn btn-sm btn-outline-success mx-1"> <i class="fa-regular fa-message"></i> Chat </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="px-3">
+                            <p style="color: rgb(194, 188, 188);">Note: Please start the meeting 5 minutes before the scheduled time.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer id="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 footer-contact">
+                        <h4>Personal-Doctor</h4>
+                        <p> Bhiwani, Sector 13 <br> Street Number-14 </p> <strong>Phone:</strong> 1023456789 <br> <strong>Email:</strong> example@gmail.com <br>
+                    </div>
+                    <div class="col-lg-3 col-md-6 footer-links">
+                        <h4>Usefull Links</h4>
+                        <ul>
+                            <li><a href="/frontend/index.html">Home</a></li>
+                            <li><a href="/frontend/about.html">About Us</a></li>
+                            <li><a href="/frontend/patients/searchDoctor.html">Search Doctor</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-md-6 footer-links">
+                        <h4>Others</h4>
+                        <ul>
+                            <li><a href="/frontend/doctors/doctorApplication.html">Join Us</a></li>
+                            <li><a href="/frontend/doctors/dashboard.html">Doctor Dashboard</a></li>
+                            <li><a href="/frontend/index.html">Search about medicines</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-md-6 footer-links">
+                        <h4>Our Social Networks</h4>
+                        <p>Connect with us at different <br> social media platforms.</p>
+                        <div class="socail-links mt-3"> 
+                            <a href="/frontend/notfound.html"><i class="fa-brands fa-twitter"></i></a> 
+                            <a href="/frontend/notfound.html"><i class="fa-brands fa-facebook-f"></i></a> 
+                            <a href="/frontend/notfound.html"><i class="fa-brands fa-instagram"></i></a> 
+                            <a href="/frontend/notfound.html"><i class="fa-brands fa-skype"></i></a> 
+                            <a href="/frontend/notfound.html"><i class="fa-brands fa-linkedin"></i></a> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="container py-4">
+            <div class="copyright"> &copy; <strong><span>Personal-Doctor</span></strong>. All Rights Reserved </div>
+            <div class="credits"> Designed by <a href="/frontend/notfound.html">Ankit Matth & Parhlad Singh</a> </div> <br>
+        </div>
+    </footer>
+    
+    <script src="/frontend/javascript/navBar.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+
+</html>

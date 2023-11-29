@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Search Doctor | Personal-Doctor</title>
+    <link rel="shortcut icon" href="/frontend/images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="/frontend/css/navbar.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" id="header">
+        <div class="container-fluid " style="background-color: #ffffff;"> <a class="navbar-brand" href="/frontend/index.html"><i class="fa-solid fa-house-medical" id="logoIconHome" style="color: #000000;"></i><img src="/frontend/images/Logo.png" id="logoIcon" alt="logo"></a> <button class="navbar-toggler" type="button" id="toggleBtn" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="navBarContent">
+                    <li class="nav-item"> <a class="nav-link active" aria-current="page" href="/frontend/index.html">Home</a> </li>
+                    <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Patients </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="/frontend/patients/searchDoctor.html">Search Doctor</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="/frontend/patients/yourAppointment.html">Your Appointments</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="/frontend/contact.html">Contact Us</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Doctors </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="/frontend/doctors/dashboard.html">Doctor Dashboard</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="/frontend/doctors/pendingRequests.html">Pending Requests</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="/frontend/doctors/doctorApplication.html">Doctor Application</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="/frontend/contact.html">Payment not received</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"> <a class="nav-link" href="/frontend/about.html">About</a> </li>
+                    <li class="nav-item"> <a href="/frontend/signup.html"><button type="submit" id="signUpbtn" class="btn btn-sm">SignUp</button></a> </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12 col-lg-4 col-xl-3 theiaStickySidebar">
+                    <div class="card search-filter">
+                        <div class="card-header">
+                            <h4 class="card-title mb-0">Search Filter</h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="filter-widget">
+                                <div class="cal-icon"> <input type="date" class="form-control datetimepicker" placeholder="Select Date"> </div>
+                            </div>
+                            <div class="filter-widget">
+                                <h4>Gender</h4>
+                                <div> <label class="custom_check"> <input type="checkbox" name="gender_type"> <span class="checkmark"></span> Male Doctor </label> </div>
+                                <div> <label class="custom_check"> <input type="checkbox" name="gender_type"> <span class="checkmark"></span> Female Doctor </label> </div>
+                            </div>
+                            <div class="filter-widget">
+                                <h4>Select Specialist</h4>
+                                <div> <label class="custom_check"> <input type="checkbox" name="select_specialist"> <span class="checkmark"></span> Urology </label> </div>
+                                <div> <label class="custom_check"> <input type="checkbox" name="select_specialist"> <span class="checkmark"></span> Neurology </label> </div>
+                                <div> <label class="custom_check"> <input type="checkbox" name="select_specialist"> <span class="checkmark"></span> Dentist </label> </div>
+                                <div> <label class="custom_check"> <input type="checkbox" name="select_specialist"> <span class="checkmark"></span> Orthopedic </label> </div>
+                                <div> <label class="custom_check"> <input type="checkbox" name="select_specialist"> <span class="checkmark"></span> Cardiologist </label> </div>
+                                <div> <label class="custom_check"> <input type="checkbox" name="select_specialist"> <span class="checkmark"></span> Cardiologist </label> </div>
+                            </div>
+                            <div class="btn-search"> <button class="btn btn-primary mt-2" style="width: 100%;" type="button">Search</button> </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 col-lg-8 col-xl-9">
+                    <div class="card m-3">
+                        <div class="carBody d-flex">
+                            <div class="left col-lg-6 p-3 px-5">
+                                <h1>Ankit Matth</h1>
+                                <h6>MBBS Qualified.</h6>
+                                <h5>Dentist (id - #12)</h5>
+                                <div class="rating"> <i class="fa-solid fa-star" style="color: #f8d616;"></i> <i class="fa-solid fa-star" style="color: #f8d616;"></i> <i class="fa-solid fa-star" style="color: #f8d616;"></i> <i class="fa-solid fa-star" style="color: #f8d616;"></i> <i class="fa-solid fa-star-half-stroke" style="color: #f8d616;"></i> <span class="d-inline-block">(35)</span> </div>
+                                <div> <i class="fa-sharp fa-solid fa-location-dot" style="color: #686464;"></i> Haryana, India </div>
+                            </div>
+                            <div class="right col-lg-6 d-grid align-items-center px-2">
+                                <div class="d-grid gap-2"> <a href="" class="btn btn-primary m-2" role="button" data-bs-toggle="modal" data-bs-target="#businessHours">More details</a>
+                                    <div class="modal fade" id="businessHours" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="businessHoursLabel" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="businessHoursLabel">Business Hours</h5> <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <table class="table table-bordered mt-3">
+                                                        <thead>
+                                                            <tr>
+                                                                <th scope="col">Weekday</th>
+                                                                <th scope="col">Timing</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <th scope="row">Monday</th>
+                                                                <td>07:00 AM to 09:00 AM</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row">Tuesday</th>
+                                                                <td>07:00 AM to 09:00 AM</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row">Wednesday</th>
+                                                                <td>07:00 AM to 09:00 AM</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row">Thursday</th>
+                                                                <td>07:00 AM to 09:00 AM</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row">Friday</th>
+                                                                <td>07:00 AM to 09:00 AM</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row">Saturday</th>
+                                                                <td>07:00 AM to 09:00 AM</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row">Sunday</th>
+                                                                <td>Closed</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table> <br>
+                                                    <h5>Consultation Charge : 100 Rs</h5>
+                                                </div>
+                                                <div class="modal-footer"> <a href="/frontend/doctors/specificProfile.html" class="btn btn-primary">View full profile</a> </div>
+                                            </div>
+                                        </div>
+                                    </div> <a href="/frontend/bookAppoint.html" class="btn btn-primary m-2" role="button">Book Appointment</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card m-3">
+                        <div class="carBody d-flex">
+                            <div class="left col-lg-6 p-3 px-5">
+                                <h1>Ankit Matth</h1>
+                                <h6>MBBS Qualified.</h6>
+                                <h5>Dentist (id - #12)</h5>
+                                <div class="rating"> <i class="fa-solid fa-star" style="color: #f8d616;"></i> <i class="fa-solid fa-star" style="color: #f8d616;"></i> <i class="fa-solid fa-star" style="color: #f8d616;"></i> <i class="fa-solid fa-star" style="color: #f8d616;"></i> <i class="fa-solid fa-star" style="color: #d1cae2;"></i> <span class="d-inline-block">(35)</span> </div>
+                                <div> <i class="fa-sharp fa-solid fa-location-dot" style="color: #686464;"></i> Haryana, India </div>
+                            </div>
+                            <div class="right col-lg-6 d-grid align-items-center px-2">
+                                <div class="d-grid gap-2"> <a href="" class="btn btn-primary m-2" role="button" data-bs-toggle="modal" data-bs-target="#businessHours">More details</a>
+                                    <div class="modal fade" id="businessHours" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="businessHoursLabel" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="businessHoursLabel">Business Hours</h5> <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <table class="table table-bordered mt-3">
+                                                        <thead>
+                                                            <tr>
+                                                                <th scope="col">Weekday</th>
+                                                                <th scope="col">Timing</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <th scope="row">Monday</th>
+                                                                <td>07:00 AM to 09:00 AM</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row">Tuesday</th>
+                                                                <td>07:00 AM to 09:00 AM</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row">Wednesday</th>
+                                                                <td>07:00 AM to 09:00 AM</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row">Thursday</th>
+                                                                <td>07:00 AM to 09:00 AM</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row">Friday</th>
+                                                                <td>07:00 AM to 09:00 AM</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row">Saturday</th>
+                                                                <td>07:00 AM to 09:00 AM</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row">Sunday</th>
+                                                                <td>Closed</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table> <br>
+                                                    <h5>Consultation Charge : 100 Rs</h5>
+                                                </div>
+                                                <div class="modal-footer"> <a href="/frontend/doctors/specificProfile.html" class="btn btn-primary">View full profile</a> </div>
+                                            </div>
+                                        </div>
+                                    </div> <a href="/frontend/bookAppoint.html" class="btn btn-primary m-2" role="button">Book Appointment</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card m-3">
+                        <div class="carBody d-flex">
+                            <div class="left col-lg-6 p-3 px-5">
+                                <h1>Ankit Matth</h1>
+                                <h6>MBBS Qualified.</h6>
+                                <h5>Dentist (id - #12)</h5>
+                                <div class="rating"> <i class="fa-solid fa-star" style="color: #f8d616;"></i> <i class="fa-solid fa-star" style="color: #f8d616;"></i> <i class="fa-solid fa-star" style="color: #f8d616;"></i> <i class="fa-solid fa-star" style="color: #f8d616;"></i> <i class="fa-solid fa-star" style="color: #f8d616;"></i> <span class="d-inline-block">(35)</span> </div>
+                                <div> <i class="fa-sharp fa-solid fa-location-dot" style="color: #686464;"></i> Haryana, India </div>
+                            </div>
+                            <div class="right col-lg-6 d-grid align-items-center px-2">
+                                <div class="d-grid gap-2"> <a href="" class="btn btn-primary m-2" role="button" data-bs-toggle="modal" data-bs-target="#businessHours">More details</a>
+                                    <div class="modal fade" id="businessHours" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="businessHoursLabel" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="businessHoursLabel">Business Hours</h5> <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <table class="table table-bordered mt-3">
+                                                        <thead>
+                                                            <tr>
+                                                                <th scope="col">Weekday</th>
+                                                                <th scope="col">Timing</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <th scope="row">Monday</th>
+                                                                <td>07:00 AM to 09:00 AM</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row">Tuesday</th>
+                                                                <td>07:00 AM to 09:00 AM</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row">Wednesday</th>
+                                                                <td>07:00 AM to 09:00 AM</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row">Thursday</th>
+                                                                <td>07:00 AM to 09:00 AM</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row">Friday</th>
+                                                                <td>07:00 AM to 09:00 AM</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row">Saturday</th>
+                                                                <td>07:00 AM to 09:00 AM</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row">Sunday</th>
+                                                                <td>Closed</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table> <br>
+                                                    <h5>Consultation Charge : 100 Rs</h5>
+                                                </div>
+                                                <div class="modal-footer"> <a href="/frontend/doctors/specificProfile.html" class="btn btn-primary">View full profile</a> </div>
+                                            </div>
+                                        </div>
+                                    </div> <a href="/frontend/bookAppoint.html" class="btn btn-primary m-2" role="button">Book Appointment</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card m-3">
+                        <div class="carBody d-flex">
+                            <div class="left col-lg-6 p-3 px-5">
+                                <h1>Ankit Matth</h1>
+                                <h6>MBBS Qualified.</h6>
+                                <h5>Dentist (id - #12)</h5>
+                                <div class="rating"> <i class="fa-solid fa-star" style="color: #f8d616;"></i> <i class="fa-solid fa-star" style="color: #f8d616;"></i> <i class="fa-solid fa-star" style="color: #f8d616;"></i> <i class="fa-solid fa-star" style="color: #f8d616;"></i> <i class="fa-solid fa-star-half-stroke" style="color: #f8d616;"></i> <span class="d-inline-block">(35)</span> </div>
+                                <div> <i class="fa-sharp fa-solid fa-location-dot" style="color: #686464;"></i> Haryana, India </div>
+                            </div>
+                            <div class="right col-lg-6 d-grid align-items-center px-2">
+                                <div class="d-grid gap-2"> <a href="" class="btn btn-primary m-2" role="button" data-bs-toggle="modal" data-bs-target="#businessHours">More details</a>
+                                    <div class="modal fade" id="businessHours" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="businessHoursLabel" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="businessHoursLabel">Business Hours</h5> <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <table class="table table-bordered mt-3">
+                                                        <thead>
+                                                            <tr>
+                                                                <th scope="col">Weekday</th>
+                                                                <th scope="col">Timing</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <th scope="row">Monday</th>
+                                                                <td>07:00 AM to 09:00 AM</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row">Tuesday</th>
+                                                                <td>07:00 AM to 09:00 AM</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row">Wednesday</th>
+                                                                <td>07:00 AM to 09:00 AM</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row">Thursday</th>
+                                                                <td>07:00 AM to 09:00 AM</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row">Friday</th>
+                                                                <td>07:00 AM to 09:00 AM</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row">Saturday</th>
+                                                                <td>07:00 AM to 09:00 AM</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row">Sunday</th>
+                                                                <td>Closed</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table> <br>
+                                                    <h5>Consultation Charge : 100 Rs</h5>
+                                                </div>
+                                                <div class="modal-footer"> <a href="/frontend/doctors/specificProfile.html" class="btn btn-primary">View full profile</a> </div>
+                                            </div>
+                                        </div>
+                                    </div> <a href="/frontend/bookAppoint.html" class="btn btn-primary m-2" role="button">Book Appointment</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer id="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 footer-contact">
+                        <h4>Personal-Doctor</h4>
+                        <p> Bhiwani, Sector 13 <br> Street Number-14 </p> <strong>Phone:</strong> 1023456789 <br> <strong>Email:</strong> example@gmail.com <br>
+                    </div>
+                    <div class="col-lg-3 col-md-6 footer-links">
+                        <h4>Usefull Links</h4>
+                        <ul>
+                            <li><a href="/frontend/index.html">Home</a></li>
+                            <li><a href="/frontend/about.html">About Us</a></li>
+                            <li><a href="/frontend/patients/searchDoctor.html">Search Doctor</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-md-6 footer-links">
+                        <h4>Others</h4>
+                        <ul>
+                            <li><a href="/frontend/doctors/doctorApplication.html">Join Us</a></li>
+                            <li><a href="/frontend/doctors/dashboard.html">Doctor Dashboard</a></li>
+                            <li><a href="/frontend/index.html">Search about medicines</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-md-6 footer-links">
+                        <h4>Our Social Networks</h4>
+                        <p>Connect with us at different <br> social media platforms.</p>
+                        <div class="socail-links mt-3"> 
+                            <a href="/frontend/notfound.html"><i class="fa-brands fa-twitter"></i></a> 
+                            <a href="/frontend/notfound.html"><i class="fa-brands fa-facebook-f"></i></a> 
+                            <a href="/frontend/notfound.html"><i class="fa-brands fa-instagram"></i></a> 
+                            <a href="/frontend/notfound.html"><i class="fa-brands fa-skype"></i></a> 
+                            <a href="/frontend/notfound.html"><i class="fa-brands fa-linkedin"></i></a> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="container py-4">
+            <div class="copyright"> &copy; <strong><span>Personal-Doctor</span></strong>. All Rights Reserved </div>
+            <div class="credits"> Designed by <a href="/frontend/notfound.html">Ankit Matth & Parhlad Singh</a> </div> <br>
+        </div>
+    </footer>
+    
+    <script src="/frontend/javascript/navBar.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+
+</html>
