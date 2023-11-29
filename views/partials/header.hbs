@@ -1,0 +1,79 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary" id="header">
+        <div class="container-fluid " style="background-color: #ffffff;"> <a class="navbar-brand" href="/"><i class="fa-solid fa-house-medical" id="logoIconHome" style="color: #000000;"></i><img src="/static/images/Logo.png" id="logoIcon" alt="logo"></a> <button class="navbar-toggler" type="button" id="toggleBtn" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="navBarContent">
+                    <li class="nav-item"> <a class="nav-link active" aria-current="page" href="/">Home</a> </li>
+                    <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Patients </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="/searchDoctor">Search Doctor</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="/yourAppointments">Your Appointments</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="/contact">Contact Us</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Doctors </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="/dashboard">Doctor Dashboard</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="/pendingRequests">Pending Requests</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="/doctorApplication">Doctor Application</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="/contact">Payment not received</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"> <a class="nav-link" href="/about">About</a> </li>
+                    <li class="nav-item"> <a href="/signup"><button type="submit" id="signUpbtn" class="btn btn-sm">SignUp</button></a> </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title px-2" id="staticBackdropLabel">Your Details</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <table class="table table-striped table-dark">
+            
+            <tr>
+                <td class="px-3">Username</td>
+                <td>--</td>
+                <td class="px-3 rows"></td>
+            </tr>
+            <tr>
+                <td class="px-3">Phone</td>
+                <td>--</td>
+                <td class="px-3 rows"></td>
+            </tr>
+            <tr>
+                <td class="px-3">Email</td>
+                <td>--</td>
+                <td class="px-3 rows"></td>
+            </tr>
+            <tr>
+                <td class="px-3">Password</td>
+                <td>--</td>
+                <td class="px-3 rows"></td>
+            </tr>
+        </table>
+      </div>
+      <div class="modal-footer">
+        <a href="/" class="btn btn-primary bg-dark text-white" id="logOut">Log Out</a>
+      </div>
+    </div>
+  </div>
+</div>

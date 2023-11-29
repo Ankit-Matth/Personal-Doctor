@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Personal-Doctor | Home</title>
+    <link rel="shortcut icon" href="/static/images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="/static/css/navbar.css">
+    <link rel="stylesheet" href="/static/css/home.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+
+<body style="background-color: rgb(235, 226, 212);">
+    {{>header data=data dataDoctor=dataDoctor}}
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="main" id="main"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="container" id="searchBox">
+                    <h1 class="text-center">Search about any Drug or Medicines</h1>
+                    <h5 class="text-center">Your trusted source of information for prescription drugs and medications</h5> <br>
+                    <form class="d-flex justify-content-center" action="/drugUses" method="post"> <input class="form-control me-2 search" type="search" required placeholder="Enter a name to search..." aria-label="Search" id="searchInput" name="drugName"> <button class="btn btn-outline-success" id="searchDrugs">Search</button> </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container mb-5">
+        <div class="row py-5">
+            <div class="col-lg-5 m-auto text-center">
+                <h1>Our Health Experts</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-3 text-center">
+                <div class="card border-0 bg-light mb-2">
+                    <div class="card-body"> <img src="/static/images/doctor-01.jpg" class="img-fluid" alt=""> </div>
+                    <h3>Dr. Nisha</h3>
+                    <h5 class="mb-4">Neurologist</h5>
+                </div>
+            </div>
+            <div class="col-lg-3 text-center">
+                <div class="card border-0 bg-light mb-2">
+                    <div class="card-body"> <img src="/static/images/doctor-02.jpg" class="img-fluid" alt=""> </div>
+                    <h3>Dr. Siddhartha</h3>
+                    <h5 class="mb-4">Heart Specialist</h5>
+                </div>
+            </div>
+            <div class="col-lg-3 text-center">
+                <div class="card border-0 bg-light mb-2">
+                    <div class="card-body"> <img src="/static/images/doctor-03.jpg" class="img-fluid" alt=""> </div>
+                    <h3>Dr. Manju</h3>
+                    <h5 class="mb-4">Orthopedist</h5>
+                </div>
+            </div>
+            <div class="col-lg-3 text-center">
+                <div class="card border-0 bg-light mb-2">
+                    <div class="card-body"> <img src="/static/images/doctor-04.jpg" class="img-fluid" alt=""> </div>
+                    <h3>Dr. Ashish</h3>
+                    <h5 class="mb-4">Cardiologist</h5>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-lg-3 text-center">
+                <div class="card border-0 bg-light mb-2">
+                    <div class="card-body"> <img src="/static/images/doctor-05.jpg" class="img-fluid" alt=""> </div>
+                    <h3>Aditya Gupta</h3>
+                    <h5 class="mb-4">Psychiatrist</h5>
+                </div>
+            </div>
+            <div class="col-lg-3 text-center">
+                <div class="card border-0 bg-light mb-2">
+                    <div class="card-body"> <img src="/static/images/doctor-06.jpg" class="img-fluid" alt=""> </div>
+                    <h3>Dr. Anjali</h3>
+                    <h5 class="mb-4">Eye Specialist</h5>
+                </div>
+            </div>
+            <div class="col-lg-3 text-center">
+                <div class="card border-0 bg-light mb-2">
+                    <div class="card-body"> <img src="/static/images/doctor-07.jpg" class="img-fluid" alt=""> </div>
+                    <h3>Dr. Manisha</h3>
+                    <h5 class="mb-4" id="pricing">Dermatologist</h5>
+                </div>
+            </div>
+            <div class="col-lg-3 text-center">
+                <div class="card border-0 bg-light mb-2">
+                    <div class="card-body"> <img src="/static/images/doctor-08.png" class="img-fluid" alt=""> </div>
+                    <h3>Many more...</h3>
+                    <h5><a href="/doctorApplication" id="forDoctor" class="btn"><b>Join us as a Doctor</a></h5>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-5 m-auto text-center">
+        <h1>How it Works?</h1>
+    </div>
+    <div class="container my-5 bg-light p-3 pt-5 border rounded">
+        <h2 class="px-4" style="font-size: 40px;">For Patients</h2>
+        <div class="stepper">
+            <div class="step">
+                <h4>Step 1: Account Creation and Login</h4>
+                <h6>Initiate the process by creating an account and subsequently proceeding to log in using your credentials.</h6>
+            </div>
+            <div class="step">
+                <h4>Step 2: Search and Appointment Booking</h4>
+                <h6>Search for a doctor from the list and book an appointment.</h6>
+            </div>
+            <div class="step">
+                <h4>Step 3: View Requested Appointments</h4>
+                <h6>You can view your requested appointments in the "Your Appointments" section.</h6>
+            </div>
+            <div class="step">
+                <h4>Step 4: Appointment Confirmation</h4>
+                <h6>Once a doctor accepts your appointment, the chat section becomes unlocked related to it.</h6>
+            </div>
+            <div class="step">
+                <h4>Step 5: Interaction in the Chat Section</h4>
+                <h6>In the chat section, engage with the doctor to acquire essential details such as precise timing, designated payment link, preferred conversation language, and any other relevant details to ensure a smooth and efficient consultation. Kindly ensure that payments are exclusively made through the authorized link provided by the Personal-Doctor organization.</h6>
+            </div>
+            <div class="step">
+                <h4>Step 6: Payment Confirmation</h4>
+                <h6>After making a payment through Cosmofeed, please share a screenshot of the transaction in the chat section. Ensure that you provide the correct username of the doctor during your payment submission.</h6>
+            </div>
+            <div class="step">
+                <h4>Step 7: Video Call Initiation</h4>
+                <h6>After approving your screenshot, the doctor will make a video call.</h6>
+            </div>
+            <div class="step">
+                <h4>Step 8: Audio Call Option</h4>
+                <h6>If you only want to make an audio call, please don't allow your camera during the video call.</h6>
+            </div>
+            <div class="step">
+                <h4>Step 9: Post-Consultation Ratings</h4>
+                <h6>After the video call, you have to give a rating for your experience with the doctor (the doctor will also give a rating to you).</h6>
+            </div>
+            <div class="step">
+                <h4>Customer Support</h4>
+                <h6>If you encounter any issues with doctors, video calls, payments, or other concerns, contact us for assistance.</h6>
+            </div>
+        </div>
+    </div>
+    <div class="container my-5 bg-light  p-3 pt-5 border rounded">
+        <h2 class="px-4" style="font-size: 40px;">For Doctors</h2>
+        <div class="stepper">
+            <div class="step">
+                <h4>Step 1: Account Creation and approval</h4>
+                <h6>Visit the Doctor Application section, complete the credential form, and submit. Prepare your documents and certificates for an upcoming interview. We'll also collect important details, such as your schedule and bank information, during the process.</h6>
+            </div>
+            <div class="step">
+                <h4>Step 2: Onboarding to Your Profile</h4>
+                <h6>Following the successful approval of your application, our team will promptly reach out to you to obtain the necessary details and facilitate the setup of your profile on our platform. Your username and password will be securely delivered to you via message or email. Feel free to log in and access your account at your earliest convenience.</h6>
+            </div>
+            <div class="step">
+                <h4>Step 3: Appointment Acceptance</h4>
+                <h6>In the "Pending Requests" section, review, accept, or cancel appointment requests along with a brief description of the patient's problem.</h6>
+            </div>
+            <div class="step">
+                <h4>Step 4: Interaction in the Chat Section</h4>
+                <h6>All accepted appointments are accessible in the "Upcoming Appointments" section of the "Doctor Dashboard." Engage with patients through the chat section, providing details such as exact timing and preferred conversation language etc.</h6>
+            </div>
+            <div class="step">
+                <h4>Step 5: Payment Confirmation</h4>
+                <h6>Share the Cosmofeed payment link in the chat section. For a customized payment link based on your charges, feel free to contact us anytime. </h6>
+            </div>
+            <div class="step">
+                <h4>Step 6: Video Call Initiation</h4>
+                <h6>After approving a screenshot provided by the patient in the chat section, initiate a video call.</h6>
+            </div>
+            <div class="step">
+                <h4>Step 7: Audio Call Option</h4>
+                <h6>If you only want to make an audio call, please don't allow your camera during the video call.</h6>
+            </div>
+            <div class="step">
+                <h4>Step 8: Post-Consultation Ratings</h4>
+                <h6>Following the video call, provide a rating for your experience with the patient. The patient will reciprocate with a rating for you.</h6>
+            </div>
+            <div class="step">
+                <h4>Step 9: Receive Your Payment</h4>
+                <h6>Once you've provided a rating, our team checks your username on the Cosmofeed dashboard, and we promptly transfer the payment to you, deducting a 5% commission.</h6>
+            </div>
+            <div class="step">
+                <h4>Customer Support</h4>
+                <h6>If you encounter any issues related to patients, video calls, payments, or other concerns, please contact us for assistance.</h6>
+            </div>
+        </div>
+    </div>
+    {{>footer}}
+     <div class="modal fade" id="loadingModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="staticBackdropLabel">Please wait...</h4>
+      </div>
+      <div class="modal-body">
+        <div style="display:flex; justify-content:center; align-items:center; height:20vh; margin:0;">
+          <div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem;">
+            <span class="sr-only">Loading...</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    {{#if data}}
+      <script>
+        localStorage.clear()
+        localStorage.setItem('userName', "{{data.userName}}");
+        localStorage.setItem('phoneNo', "{{data.phoneNo}}");
+        localStorage.setItem('email', "{{data.email}}");
+        localStorage.setItem('password', "{{data.password}}");
+        localStorage.setItem('role', "Patient");
+      </script>
+    {{/if}}
+    {{#if dataDoctor}}
+      <script>
+        localStorage.clear()
+        localStorage.setItem('userName', "{{dataDoctor.username}}");
+        localStorage.setItem('phoneNo', "{{dataDoctor.phoneNo}}");
+        localStorage.setItem('email', "{{dataDoctor.email}}");
+        localStorage.setItem('password', "{{dataDoctor.password}}");
+        localStorage.setItem('role', "Doctor");
+      </script>
+    {{/if}}
+    <script src="/static/javascript/navBar.js"></script>
+    <script src="/static/javascript/home.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+
+</html>

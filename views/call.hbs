@@ -1,0 +1,165 @@
+<html>
+
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        #root {
+            width: 100vw;
+            height: 100vh;
+            }
+        .star{
+            cursor: pointer;
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+
+<body>
+    <div id="root"></div>
+    <div class="modal fade" id="videoPopUp" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                             <div class="modal-content">
+                               <div class="modal-header">
+                                 <h4 class="modal-title" id="staticBackdropLabel">Alert</h4>
+                               </div>
+                              <div class="modal-body">
+                                <h6 id="popUpBody">Dear <script>document.write(localStorage.getItem("userName"))</script>, you cannot initiate a Video Call directly.</h6>
+                                <p><b>Dr {{docName}}</b> will share a unique room link in the chat. Simply open the link in a new tab to join the call seamlessly.</p>
+                              </div>
+                            </div>
+                          </div>
+                          </div>
+   <div class="modal fade" id="ratingModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="ratingModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="ratingModalLabel">Rate Your Experience</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>Please rate your experience:</p>
+        <div class="rating" id="starRating">
+          <span class="star" data-value="1"><i class="fa-regular fa-star" style="color: #ffd43b;"></i></span>
+          <span class="star" data-value="2"><i class="fa-regular fa-star" style="color: #ffd43b;"></i></span>
+          <span class="star" data-value="3"><i class="fa-regular fa-star" style="color: #ffd43b;"></i></span>
+          <span class="star" data-value="4"><i class="fa-regular fa-star" style="color: #ffd43b;"></i></span>
+          <span class="star" data-value="5"><i class="fa-regular fa-star" style="color: #ffd43b;"></i></span>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a href="{{docName}}" new="{{username}}" class="btn btn-primary" id="submitRatingBtn">Submit Rating</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+<script src="https://unpkg.com/@zegocloud/zego-uikit-prebuilt/zego-uikit-prebuilt.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<script>
+window.onload = function () {
+    function getUrlParams(url) {
+        let urlStr = url.split('?')[1];
+        const urlSearchParams = new URLSearchParams(urlStr);
+        const result = Object.fromEntries(urlSearchParams.entries());
+        return result;
+    }
+
+
+        // Generate a Token by calling a method.
+        // @param 1: appID
+        // @param 2: serverSecret
+        // @param 3: Room ID
+        // @param 4: User ID
+        // @param 5: Username
+    const roomID = getUrlParams(window.location.href)['roomID'] || (Math.floor(Math.random() * 10000) + "");
+    const userID = Math.floor(Math.random() * 10000) + "";
+    const userName = localStorage.getItem("userName");
+    const appID = 932620046;
+    const serverSecret = "5b678ee9e004bebfe3d1c535b15e0d29";
+    const kitToken = ZegoUIKitPrebuilt.generateKitTokenForTest(appID, serverSecret, roomID, userID, userName);
+
+    
+        const zp = ZegoUIKitPrebuilt.create(kitToken);
+        zp.joinRoom({
+            container: document.querySelector("#root"),
+            sharedLinks: [{
+                name: 'Personal link',
+                url: window.location.protocol + '//' + window.location.host  + window.location.pathname + '?roomID=' + roomID,
+            }],
+            scenario: {
+                mode: ZegoUIKitPrebuilt.VideoConference,
+            },
+                
+           	turnOnMicrophoneWhenJoining: true,
+           	turnOnCameraWhenJoining: true,
+           	showMyCameraToggleButton: true,
+           	showMyMicrophoneToggleButton: true,
+           	showAudioVideoSettingsButton: true,
+           	showScreenSharingButton: true,
+           	showTextChat: true,
+           	showUserList: true,
+           	maxUsers: 2,
+           	layout: "Auto",
+           	showLayoutButton: false,
+          
+            onLeaveRoom: () => {
+                document.getElementById('root').style.display="none"
+                var myModal = new bootstrap.Modal(document.getElementById('ratingModal'));
+                myModal.show();
+
+                const stars = document.querySelectorAll('.star');
+                const submitRatingBtn = document.getElementById('submitRatingBtn');
+                var feedbackUserName = submitRatingBtn.getAttribute('new')
+                if(userName === feedbackUserName){
+                  feedbackUserName = submitRatingBtn.getAttribute('href')
+                }
+                stars.forEach(star => {
+                  star.addEventListener('click', function () {
+                    const selectedValue = parseInt(this.getAttribute('data-value'));
+                    
+                    stars.forEach(s => {
+                      const value = parseInt(s.getAttribute('data-value'));
+                      if (value <= selectedValue) {
+                        s.firstElementChild.classList.remove('fa-regular');
+                        s.firstElementChild.classList.add('fa-solid');
+                      }
+                      if (value > selectedValue) {
+                        s.firstElementChild.classList.add('fa-regular');
+                        s.firstElementChild.classList.remove('fa-solid');
+                      }
+                    });
+
+                    stars.forEach(s => s.classList.remove('selected'));
+                    this.classList.add('selected');
+
+                    const submitRatingUrl = `/submitRating/${selectedValue}/${feedbackUserName}`;
+                    submitRatingBtn.href = submitRatingUrl;
+                  });
+                });
+            }
+        });
+            
+}
+async function waitForInput() {
+  while (!document.getElementById('root') || !document.getElementById('root').querySelector('input')) {
+    await new Promise(resolve => setTimeout(resolve, 100));
+  }
+
+  var inputElement = document.getElementById('root').querySelector('input');
+
+  inputElement.setAttribute('readonly', true)
+  if(localStorage.getItem('role')=="Patient"){
+    document.getElementById('root').style.display="none"
+    var myModal = new bootstrap.Modal(document.getElementById('videoPopUp'));
+    myModal.show(); 
+  }
+}
+
+waitForInput();
+
+</script>
+
+</html>

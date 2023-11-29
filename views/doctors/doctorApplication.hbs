@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Doctor Application | Personal-Doctor</title>
+    <link rel="shortcut icon" href="/static/images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="/static/css/navbar.css">
+    <link rel="stylesheet" href="/static/css/contact.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+
+<body>
+    {{>header}}
+    <div class="container-fluid my-1 py-5" style="background-color: rgba(22, 22, 22, 0.555);">
+        <div class="container py-5">
+            <div class="row gx-5">
+                <div class="col-lg-6">
+                    <div class="bg-white text-center p-5 border rounded" style="min-height: 392px;">
+                        <h3>Benefits of Joining Our Network</h3> <br>
+                        <p>"Join our network to provide medical guidance and be a source of hope for those seeking health answers. Connect with diverse patients, share your expertise, and make a meaningful impact on lives. Earn money for your insights while contributing to the well-being of others. We charge only 5% of your earnings for a fair and transparent system. Let's build a thriving community of health professionals and shape a future where knowledge transforms lives."</p> <br>
+                        <p> <b>Be ready with your documents and certificates. We will be reaching out to you for an interview soon, and apart from this, we appreciate your commitment to our vision.</b></p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="bg-white text-center rounded p-4 border" style="min-height: 392px;">
+                        <h1 class="mb-4">Join Our Network</h1>
+                        <form action="/application" method="POST">
+                            <div class="row g-3">
+                                <div class="col-12 col-sm-6"> <input type="text" class="form-control bg-light border-0" placeholder="Your Name" name="Name" required style="height: 55px;"> </div>
+                               <div class="col-12 col-sm-6"> <select class="form-select bg-light border-0" name="Speciality" required style="height: 55px;">
+                                        <option selected>Select Your Speciality</option>
+                                        <option value="Neurologist">Neurologist</option>
+                                        <option value="Orthopedist">Orthopedist</option>
+                                        <option value="Cardiologist">Cardiologist</option>
+                                        <option value="Psychiatrist">Psychiatrist</option>
+                                        <option value="Dermatologist">Dermatologist</option>
+                                        <option value="Other">Other</option>
+                                    </select> </div>
+                                <div class="col-12 col-sm-6">
+                                    <div class="phone" id="Phone" data-target-input="nearest"> <input type="number" class="form-control bg-light border-0 datetimepicker-input" placeholder="Phone No" required name="Phone" data-target="#phone" data-toggle="datetimepicker" style="height: 55px;"> </div>
+                                </div>
+                                <div class="col-12 col-sm-6"> <input type="email" class="form-control bg-light border-0" placeholder="Your Email" name="Email" required style="height: 55px;"> </div>
+                                <div class="col-24 col-sm-12"> <input type="text" class="form-control bg-light border-0" placeholder="Why you want to join us ?" name="Vision" required style="height: 55px;"> </div>
+                                <div class="col-24 col-sm-12"> <input type="text" class="form-control bg-light border-0" placeholder="Your education details ( College, Degrees & certificates etc. )" name="Education" required style="height: 55px;"> </div>
+                                <div class="col-12"> <button class="btn btn-primary w-100 py-3 mb-3" id="doctorSubmit" type="submit">Submit</button> </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{>footer}}
+    <div class="modal fade" id="loginPopUp" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+       <div class="modal-content">
+         <div class="modal-header">
+           <h4 class="modal-title" id="staticBackdropLabel">Alert</h4>
+         </div>
+        <div class="modal-body">
+          <h6 id="popUpBody">Access to this page is restricted to doctorss only; As a patient, you do not have the right to access this.</h6>
+        </div>
+        <div class="modal-footer">
+          <a href="/" class="btn btn-primary" id="popUpBtn">Back to Home</a>
+        </div>
+      </div>
+    </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            if(localStorage.getItem("role")=="Patient"){
+                var myModal = new bootstrap.Modal(document.getElementById('loginPopUp'));
+                myModal.show(); 
+            }
+        })
+    </script>
+    <script src="/static/javascript/navBar.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+
+</html>

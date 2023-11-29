@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Search Doctor | Personal-Doctor</title>
+      <link rel="shortcut icon" href="/static/images/favicon.png" type="image/x-icon">
+      <link rel="stylesheet" href="/static/css/navbar.css">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+   </head>
+   <body>
+      {{>header}}
+      <div class="content">
+         <div class="container-fluid">
+            <div class="row">
+               <div class="col-md-12 col-lg-4 col-xl-3 theiaStickySidebar mt-4">
+                  <div class="card search-filter bg-light">
+                     <div class="card-header">
+                        <h4 class="card-title mb-0">Search Filter</h4>
+                     </div>
+                     <div class="card-body">
+                        <div class="filter-widget">
+                           <h4>Gender</h4>
+                           <div class="p-1">
+                              <label class="custom_check" id="Male">
+                              <input type="checkbox" name="gender_type" onclick="toggleCheckboxCheckedAttribute(this)">
+                              <span class="checkmark"></span> Male
+                              </label>
+                           </div>
+                           <div class="p-1">
+                              <label class="custom_check" id="Female">
+                              <input type="checkbox" name="gender_type" onclick="toggleCheckboxCheckedAttribute(this)">
+                              <span class="checkmark"></span> Female
+                              </label>
+                           </div>
+                        </div>
+                        <div class="filter-widget mt-3">
+                           <h4>Speciality</h4>
+                           <div class="p-1">
+                              <label class="custom_check" id="Urologist">
+                              <input type="checkbox" name="select_specialist" onclick="toggleCheckboxCheckedAttribute(this)">
+                              <span class="checkmark"></span> Urologist
+                              </label>
+                           </div>
+                           <div class="p-1">
+                              <label class="custom_check" id="Neurologist">
+                              <input type="checkbox" name="select_specialist" onclick="toggleCheckboxCheckedAttribute(this)">
+                              <span class="checkmark"></span> Neurologist
+                              </label>
+                           </div>
+                           <div class="p-1">
+                              <label class="custom_check" id="Dentist">
+                              <input type="checkbox" name="select_specialist" onclick="toggleCheckboxCheckedAttribute(this)">
+                              <span class="checkmark"></span> Dentist
+                              </label>
+                           </div>
+                           <div class="p-1">
+                              <label class="custom_check" id="Cardiologist">
+                              <input type="checkbox" name="select_specialist" onclick="toggleCheckboxCheckedAttribute(this)">
+                              <span class="checkmark"></span> Cardiologist
+                              </label>
+                           </div>
+                           <div class="p-1">
+                              <label class="custom_check" id="Psychiatrist">
+                              <input type="checkbox" name="select_specialist" onclick="toggleCheckboxCheckedAttribute(this)">
+                              <span class="checkmark"></span> Psychiatrist
+                              </label>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-12 col-lg-8 col-xl-9">
+                  <div class="card m-3 text-center bg-dark">
+                     <h2 class="m-3 text-white">Please select checkboxes based on your requirements.</h2>
+                  </div>
+                  {{#each dataDoctor}}
+                  <div class="card m-3" style="display: none;" gender="{{gender}}" speciality="{{speciality}}">
+                     <div class="carBody d-flex">
+                        <div class="left col-lg-6 p-3 px-5">
+                           <h1>{{username}}</h1>
+                           <h6>{{education}}</h6>
+                           <h5>{{speciality}} ({{gender}})</h5>
+                           <div class="rating">
+                              <span id="Stars{{_id}}"></span>
+                              <span class="d-inline-block">({{totalCalls}})</span>
+                           </div>
+                           <div>
+                              <i class="fa-sharp fa-solid fa-location-dot" style="color: #686464;"></i> {{location}}
+                           </div>
+                        </div>
+                        <div class="right col-lg-6 d-grid align-items-center px-2">
+                           <div class="d-grid gap-2">
+                              <a href="" class="btn btn-primary m-2" role="button" data-bs-toggle="modal" data-bs-target="#A{{_id}}">More details</a>
+                              <div class="modal fade" id="A{{_id}}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="businessHoursLabel" aria-hidden="true">
+                                 <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content">
+                                       <div class="modal-header">
+                                          <h5 class="modal-title" id="businessHoursLabel">Business Hours</h5>
+                                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                       </div>
+                                       <div class="modal-body">
+                                          <table class="table table-bordered mt-3">
+                                             <thead>
+                                                <tr>
+                                                   <th scope="col">Weekday</th>
+                                                   <th scope="col">Timing</th>
+                                                </tr>
+                                             </thead>
+                                             <tbody>
+                                                <tr>
+                                                   <th scope="row">Monday</th>
+                                                   <td>{{businessHours.Monday}}</td>
+                                                </tr>
+                                                <tr>
+                                                   <th scope="row">Tuesday</th>
+                                                   <td>{{businessHours.Tuesday}}</td>
+                                                </tr>
+                                                <tr>
+                                                   <th scope="row">Wednesday</th>
+                                                   <td>{{businessHours.Wednesday}}</td>
+                                                </tr>
+                                                <tr>
+                                                   <th scope="row">Thursday</th>
+                                                   <td>{{businessHours.Thursday}}</td>
+                                                </tr>
+                                                <tr>
+                                                   <th scope="row">Friday</th>
+                                                   <td>{{businessHours.Friday}}</td>
+                                                </tr>
+                                                <tr>
+                                                   <th scope="row">Saturday</th>
+                                                   <td>{{businessHours.Saturday}}</td>
+                                                </tr>
+                                                <tr>
+                                                   <th scope="row">Sunday</th>
+                                                   <td>{{businessHours.Sunday}}</td>
+                                                </tr>
+                                             </tbody>
+                                          </table>
+                                          <br>
+                                          <h5>Consultation Charge: {{charge}}</h5>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <a href="/bookAppoint" class="btn btn-primary m-2" role="button">Book Appointment</a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  {{>ratingLogic}}
+                  {{/each}}
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="modal fade" id="loginPopUp" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+         <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <h4 class="modal-title" id="staticBackdropLabel">Alert</h4>
+               </div>
+               <div class="modal-body">
+                  <h6 id="popUpBody">Kindly log in to your account to access this page.</h6>
+               </div>
+               <div class="modal-footer">
+                  <a href="/signUp" class="btn btn-primary" id="popUpBtn">SignUp or Login</a>
+               </div>
+            </div>
+         </div>
+      </div>
+      {{>footer}}
+      <script>
+         document.addEventListener("DOMContentLoaded", function() {
+             var hasData = localStorage.getItem("email");
+             if(!hasData){
+                 var myModal = new bootstrap.Modal(document.getElementById('loginPopUp'));
+                 myModal.show();  
+             }
+             if(localStorage.getItem("role")=="Doctor"){
+                 document.getElementById("popUpBody").innerText="Access to this page is restricted to patients only; As a doctor, you do not have the right to access this.";
+                 document.getElementById("popUpBtn").innerText="Back to Home";
+                 document.getElementById("popUpBtn").setAttribute("href","/")
+                 var myModal = new bootstrap.Modal(document.getElementById('loginPopUp'));
+                 myModal.show(); 
+             }
+         })
+      </script>
+      <script src="/static/javascript/navBar.js"></script>
+      <script src="/static/javascript/searchDoc.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+   </body>
+</html>

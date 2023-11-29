@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Your Appointments | Personal-Doctor</title>
+    <link rel="shortcut icon" href="/static/images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="/static/css/navbar.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+
+<body>
+    {{>header}}
+    <div class="col-md-12 col-lg-12 col-xl-10 m-auto text-center">
+        <h1 class="card m-3 py-4 px-4 mt-3 bg-dark text-white">Upcoming Appointments</h1>
+    </div>
+    {{#each dataBookings}}
+    {{#ifEquals isAccepted "true"}}
+     <div class="col-md-12 col-lg-12 col-xl-10 m-auto" userName="{{userName}}" style="display: none;">
+        <div class="card m-3 p-2 px-4 mt-3 bg-dark">
+            <div class="carBody d-flex">
+                <div class="col-lg-6 d-flex align-items-center p-3" style="justify-content: space-between;">
+                    <div class="details text-white">
+                        <h3>Dr. {{docUserName}}</h3>
+                        <div class="rating"> 
+                            <p>Consultation Charge: {{charge}}</p>
+                        </div>
+                        </div>
+                    <div class="date"> <a href="#" class="btn btn-secondary">{{date}}</a> </div>
+                </div>
+                <div class="col-lg-6 d-flex align-items-center" style="justify-content: space-between;">
+                    <div class="time"> <a href="#" class="btn btn-secondary">{{time}}</a> </div>
+                    <div class="appointment-action"> 
+                       <a href="#" class="btn btn-sm btn-outline-info mx-1" data-bs-toggle="modal" data-bs-target="#B{{_id}}"> <i class="far fa-eye"></i> View </a>
+                        <div class="modal fade" id="B{{_id}}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="aboutModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="aboutModalLabel">Details about problem...</h5> <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>{{description}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                      <a href="#" class="btn btn-sm btn-outline-success mx-1"> <i class="fa-solid fa-check mx-1"></i>Accepted</a>
+                      <a href="/patientConsult/{{userName}}/{{docUserName}}" class="btn btn-sm btn-outline-danger position-relative mx-1"> <i class="fa-regular fa-message"></i> Chat </a>
+                    </div>
+                </div>
+            </div>
+            <div class="px-3">
+            <p style="color: rgb(247, 247, 247);">Note: Please come here 5 minutes before the scheduled time.</p>
+            </div>
+        </div>
+     </div>
+    {{/ifEquals}}
+    {{/each}}
+    {{#each dataBookings}}
+    {{#ifEquals isAccepted "undefined"}}
+     <div class="col-md-12 col-lg-12 col-xl-10 m-auto" userName="{{userName}}" style="display: none;">
+        <div class="card m-3 p-2 px-4 mt-3 bg-dark">
+            <div class="carBody d-flex">
+                <div class="col-lg-6 d-flex align-items-center p-3" style="justify-content: space-between;">
+                    <div class="details text-white">
+                        <h3>Dr. {{docUserName}}</h3>
+                        <div class="rating"> 
+                            <p>Consultation Charge: {{charge}}</p>
+                        </div>
+                    </div>
+                    <div class="date"> <a href="#" class="btn btn-secondary">{{date}}</a> </div>
+                </div>
+                <div class="col-lg-6 d-flex align-items-center" style="justify-content: space-between;">
+                    <div class="time"> <a href="#" class="btn btn-secondary">{{time}}</a> </div>
+                    <div class="appointment-action">  
+                      <a href="#" class="btn btn-sm btn-outline-info mx-1" data-bs-toggle="modal" data-bs-target="#B{{_id}}"> <i class="far fa-eye"></i> View </a>
+                        <div class="modal fade" id="B{{_id}}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="aboutModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="aboutModalLabel">Details about problem...</h5> <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>{{description}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                      <a href="#" class="btn btn-sm btn-outline-success mx-1"> <i class="fa-regular fa-clock"></i> &nbsp;Pending  </a>
+                      <a href="#" onclick="alert('Your appointment has not yet been confirmed.')" class="btn btn-sm btn-outline-danger position-relative mx-1"> <i class="fa-regular fa-message"></i> Chat </a>
+                    </div>
+                </div>
+            </div>
+            <div class="px-3">
+            <p style="color: rgb(247, 247, 247);">Note: Please come here 5 minutes before the scheduled time.</p>
+            </div>
+        </div>
+     </div>
+    {{/ifEquals}}
+    {{/each}}
+     <div class="modal fade" id="loginPopUp" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+       <div class="modal-content">
+         <div class="modal-header">
+           <h4 class="modal-title" id="staticBackdropLabel">Alert</h4>
+         </div>
+        <div class="modal-body">
+          <h6 id="popUpBody">Kindly log in to your account to access this page.</h6>
+        </div>
+        <div class="modal-footer">
+          <a href="/signUp" class="btn btn-primary" id="popUpBtn">SignUp or Login</a>
+        </div>
+      </div>
+    </div>
+    </div>
+    {{>footer}}
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var hasData = localStorage.getItem("email");
+            if(!hasData){
+                var myModal = new bootstrap.Modal(document.getElementById('loginPopUp'));
+                myModal.show();  
+            }
+            if(localStorage.getItem("role")=="Doctor"){
+                document.getElementById("popUpBody").innerText="Access to this page is restricted to patients only; As a doctor, you do not have the right to access this.";
+                document.getElementById("popUpBtn").innerText="Back to Home";
+                document.getElementById("popUpBtn").setAttribute("href","/")
+                var myModal = new bootstrap.Modal(document.getElementById('loginPopUp'));
+                myModal.show(); 
+            }
+            var targetUsername = localStorage.getItem("userName")
+            var divElements = document.querySelectorAll('div[userName="' + targetUsername + '"]');
+            divElements.forEach(function (element) {
+                element.style.display = 'block';
+            });
+        })
+    </script>
+    <script src="/static/javascript/navBar.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+
+</html>
