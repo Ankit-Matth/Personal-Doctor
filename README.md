@@ -74,6 +74,9 @@ Follow these steps to set up the project on your local machine:
 node src/app.js
 ```
 
+## Demo Payment Link
+https://cosmofeed.com/vp/656452ee5929eb0029dd5ae2
+
 ## Features provided by us
 
 1. **Remote Access to Certified Doctors:**
