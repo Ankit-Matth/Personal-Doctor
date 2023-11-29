@@ -4,7 +4,7 @@ const app = express()
 
 const OpenAI = require('openai')
 const openai = new OpenAI({
-  apiKey: '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',
+  apiKey: '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',
 });
 
 const mongoose = require("mongoose")
