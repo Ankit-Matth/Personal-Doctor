@@ -1,0 +1,27 @@
+<script>
+    var rating{{_id}} = {{rating}};
+    var integerValue{{_id}} = Math.floor(rating{{_id}});
+    var hasHalfStar{{_id}} = rating{{_id}} % 1 !== 0;
+    var Stars{{_id}} = document.getElementById("Stars{{_id}}");
+
+    for (var i = 0; i < integerValue{{_id}}; i++) {
+        var starSolid{{_id}} = document.createElement('i');
+        starSolid{{_id}}.className = 'fa-solid fa-star';
+        starSolid{{_id}}.style.color = '#f8d616';
+        Stars{{_id}}.appendChild(starSolid{{_id}});
+    }
+
+    if (hasHalfStar{{_id}}) {
+        var starHalf{{_id}} = document.createElement('i');
+        starHalf{{_id}}.className = 'fa-solid fa-star-half-stroke';
+        starHalf{{_id}}.style.color = '#f8d616';
+        Stars{{_id}}.appendChild(starHalf{{_id}});
+    }
+
+    for (var i = integerValue{{_id}} + (hasHalfStar{{_id}} ? 1 : 0); i < 5; i++) {
+        var starRegular{{_id}} = document.createElement('i');
+        starRegular{{_id}}.className = 'fa-regular fa-star';
+        starRegular{{_id}}.style.color = '#f8d616';
+        Stars{{_id}}.appendChild(starRegular{{_id}});
+    }
+</script>

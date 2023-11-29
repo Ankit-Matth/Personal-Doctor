@@ -1,0 +1,80 @@
+.formBox {
+  font-family: Arial, sans-serif;
+  max-width: 500px !important;
+  margin: auto;
+  margin-top: 50px;
+  padding: 5px 20px !important;
+  background-color: #fff;
+  border-radius: 3px;
+  box-shadow: 2px 2px 8px rgb(0, 0, 0);
+}
+
+.formBox h1 {
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group>p {
+  display: flex;
+  justify-content: space-between;
+  padding: 2px 7px;
+  margin-right: 13px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group input[type="password"],
+.form-group input[type="number"],
+.form-group input[type="email"] {
+  width: 95%;
+  padding: 8px;
+  font-size: 12px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.form-group fieldset {
+  font-weight: bolder;
+  width: 95%;
+  padding: 10px 0px;
+  padding-left: 20px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.form-group input[type="submit"] {
+  width: 95%;
+  padding: 8px;
+  font-size: 12px;
+  border-radius: 5px;
+  border: none;
+  font-size: 20px;
+  background-color: #ff01b3;
+  color: #ffffff;
+  cursor: pointer;
+  font-weight: bolder;
+}
+
+.form-group input[type="submit"]:hover {
+  background-color: #50f53b;
+  color: black;
+}
+
+.form-group input[type="radio"] {
+  accent-color: blue;
+}
+
+.form-group input[type="radio"]:hover {
+  cursor: pointer;
+}

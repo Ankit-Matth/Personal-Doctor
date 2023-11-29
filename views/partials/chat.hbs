@@ -1,0 +1,30 @@
+<div id="cometchat"></div>
+<script>
+  window.addEventListener('DOMContentLoaded', (event) => {
+    CometChatWidget.init({
+      "appID": "248967ff414b0837",
+      "appRegion": "in",
+      "authKey": "b950ebf7f68d06f073fa6bc8f82c013822ae7911"
+    }).then(response => {
+      console.log("Initialization completed successfully");
+      CometChatWidget.login({
+        "uid": localStorage.getItem('userName').toString()
+      }).then(response => {
+        CometChatWidget.launch({
+          "widgetID": "a54c8098-3f34-4838-a36a-84917f18404a",
+          "target": "#cometchat",
+          "roundedCorners": "true",
+          "height": "76vh",
+          "width": "100%",
+          "defaultID": '{{username}}',
+          "defaultType": 'user' 
+        });
+      }, error => {
+        console.log("User login failed with error:", error);
+      });
+    }, error => {
+      console.log("Initialization failed with error:", error);
+    });
+  });
+
+</script>
