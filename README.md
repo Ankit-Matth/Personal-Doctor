@@ -49,10 +49,9 @@ Follow these steps to set up the project on your local machine:
     ```bash
     cd Personal-Doctor
     ```
-4. Add KEY="<YOUR_API_KEY>" in the *.env* file in the root directory:
-    ```bash
-    I am not providing my API key directly here because it goes against the guidelines set by OPEN AI. (OPEN AI detects my key and blocks it due to the reason that I expose it in public.) If you do not have an API key, email me at ankitmatth101@gmail.com, and I will provide it to you personally.
-   ```
+4. **Add KEY="<YOUR_API_KEY>" in the *.env* file in the root directory:**
+
+    I am not providing my API key directly here because it goes against the guidelines set by OPEN AI. (OPEN AI detects my key and blocks it due to the reason that I expose it in public.) If you do not have an API key, please email me at ankitmatth101@gmail.com, and I will provide it to you personally.
 
 5. **Install Dependencies:**
     ```bash
