@@ -8,7 +8,7 @@
     }).then(response => {
       console.log("Initialization completed successfully");
       CometChatWidget.login({
-        "uid": localStorage.getItem('userName').toString()
+        "uid": localStorage.getItem('role').toString()
       }).then(response => {
         CometChatWidget.launch({
           "widgetID": "a54c8098-3f34-4838-a36a-84917f18404a",
@@ -16,7 +16,7 @@
           "roundedCorners": "true",
           "height": "76vh",
           "width": "100%",
-          "defaultID": '{{username}}',
+          "defaultID": localStorage.getItem('role') == "Patient" ? "Doctor" : "Patient",
           "defaultType": 'user' 
         });
       }, error => {
