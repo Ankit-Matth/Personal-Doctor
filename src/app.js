@@ -169,10 +169,6 @@ app.post("/drugUses", async (req, res) => {
     const ans = "My Open AI API key has been blocked because I displayed it publicly. Sorry for the inconvenience."
     res.render("drugUses", { ans, prompt });
   }
-  });
-
-  const ans = chatResponse.choices[0].message.content;
-  res.render("drugUses", { ans, prompt });
 });
 
 app.get('/submitRating/:ratingCount/:userName',async (req,res)=>{
