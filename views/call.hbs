@@ -18,28 +18,13 @@
 
 <body>
     <div id="root"></div>
-    <div class="modal fade" id="videoPopUp" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                            <div class="modal-dialog modal-dialog-centered">
-                             <div class="modal-content">
-                               <div class="modal-header">
-                                 <h4 class="modal-title" id="staticBackdropLabel">Alert</h4>
-                               </div>
-                              <div class="modal-body">
-                                <h6 id="popUpBody">Dear <script>document.write(localStorage.getItem("userName"))</script>, you cannot initiate a Video Call directly.</h6>
-                                <p><b>Dr {{docName}}</b> will share a unique room link in the chat. Simply open the link in a new tab to join the call seamlessly.</p>
-                              </div>
-                            </div>
-                          </div>
-                          </div>
    <div class="modal fade" id="ratingModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="ratingModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
         <h4 class="modal-title" id="ratingModalLabel">Rate Your Experience</h4>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <p>Please rate your experience:</p>
         <div class="rating" id="starRating">
           <span class="star" data-value="1"><i class="fa-regular fa-star" style="color: #ffd43b;"></i></span>
           <span class="star" data-value="2"><i class="fa-regular fa-star" style="color: #ffd43b;"></i></span>
@@ -48,8 +33,9 @@
           <span class="star" data-value="5"><i class="fa-regular fa-star" style="color: #ffd43b;"></i></span>
         </div>
       </div>
-      <div class="modal-footer">
-        <a href="{{docName}}" new="{{username}}" class="btn btn-primary" id="submitRatingBtn">Submit Rating</a>
+      <div class="modal-footer d-flex justify-content-between">
+        <p class="mr-5">Please click on one of the stars...</p>
+        <a href="#" current="{{docName}}" new="{{username}}" class="btn btn-primary" id="submitRatingBtn">Submit Rating</a>
       </div>
     </div>
   </div>
@@ -114,7 +100,7 @@ window.onload = function () {
                 const submitRatingBtn = document.getElementById('submitRatingBtn');
                 var feedbackUserName = submitRatingBtn.getAttribute('new')
                 if(userName === feedbackUserName){
-                  feedbackUserName = submitRatingBtn.getAttribute('href')
+                  feedbackUserName = submitRatingBtn.getAttribute('current')
                 }
                 stars.forEach(star => {
                   star.addEventListener('click', function () {
@@ -151,10 +137,8 @@ async function waitForInput() {
   var inputElement = document.getElementById('root').querySelector('input');
 
   inputElement.setAttribute('readonly', true)
-  if(localStorage.getItem('role')=="Patient"){
-    document.getElementById('root').style.display="none"
-    var myModal = new bootstrap.Modal(document.getElementById('videoPopUp'));
-    myModal.show(); 
+  if(localStorage.getItem('role')=="Doctor"){
+    alert("Go to the previous tab and share the below link in the chat...")
   }
 }
 
