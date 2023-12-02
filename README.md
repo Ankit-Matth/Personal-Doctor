@@ -49,24 +49,26 @@ Follow these steps to set up the project on your local machine:
     ```bash
     cd Personal-Doctor
     ```
-4. **Add KEY="<YOUR_API_KEY>" in the *.env* file in the root directory:**
+4. **Configure API Key in the .env File:**
 
-    I am not providing my API key directly here because it goes against the guidelines set by OPEN AI. (OPEN AI detects my key and blocks it due to the reason that I expose it in public.) If you do not have an API key, please email me at ankitmatth101@gmail.com, and I will provide it to you personally.
+   Open the *.env* file in the root directory and look for the line that says `KEY=<API Key>` and replace the `<API Key>` with the actual API key you obtained from the Open AI. I am not providing my API key directly here because it goes against the guidelines set by OPEN AI. (OPEN AI detects my key and blocks it due to the reason that I expose it in public.)
 
-5. **Install Dependencies:**
+   **Note:** If you don't have an API key, kindly email me at ankitmatth101@gmail.com, and I will provide it to you personally. Alternatively, you may replace it with a dummy API key (**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**) to bypass a specific feature, namely the ability to search for information about the uses of medicines.
+
+6. **Install Dependencies:**
     ```bash
     npm install
     ```
 
-6. **Run the Application:**
+7. **Run the Application:**
     ```bash
     npm start
     ```
 
-7. **View Output:**
+8. **View Output:**
    Open your browser and go to [http://localhost:8089/](http://localhost:8089/) to see the output.
 
-8. **Development Mode:**
+9. **Development Mode:**
     ```bash
     npm run dev
     ```
