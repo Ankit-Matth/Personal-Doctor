@@ -13,6 +13,14 @@ var Dentist = document.getElementById('Dentist')
 var Cardiologist = document.getElementById('Cardiologist')
 var Psychiatrist = document.getElementById('Psychiatrist')
 
+document.addEventListener('DOMContentLoaded',function(){
+  Male.firstElementChild.setAttribute("checked", "checked");
+  var divElements = document.querySelectorAll('div[gender="Male"]');
+  divElements.forEach(function (ele) {
+    ele.style.display = "block";
+  });
+})
+
 function handleCheckboxChange(checkbox, attribute, value) {
   checkbox.addEventListener('change', function () {
     var divElements = document.querySelectorAll(`div[${attribute}="${value}"]`);

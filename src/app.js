@@ -99,11 +99,14 @@ app.post("/application",async (req,res)=>{
 })
 app.post("/booking",async (req,res)=>{
   try {
+    if (req.body.description.trim() === "") {
+      res.send("The description cannot be null...")
+    } else{
     const bookingadding = new booking({
       userName: req.body.username,
       phoneNo: req.body.Phone,
       email: req.body.email,
-      docUserName: req.body.nameOfDoctor,
+      docUserName: req.body.nameOfDoctor.charAt(0).toUpperCase() + req.body.nameOfDoctor.slice(1),
       date: req.body.date,
       time: req.body.time,
       description: req.body.description,
@@ -112,7 +115,7 @@ app.post("/booking",async (req,res)=>{
 
     await bookingadding.save();
     res.status(201).render("index");
-
+  }
   } catch (error) {
     res.status(400).send(error);
   }
