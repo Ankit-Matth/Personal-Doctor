@@ -109,7 +109,7 @@ https://cosmofeed.com/vp/656452ee5929eb0029dd5ae2
 
 ![forPatients](https://github.com/Ankit-Matth/Personal-Doctor/assets/146843890/3afcb266-4a35-49ca-8b6f-1e55c6460d2d)
 
-![forDoctors](https://github.com/Ankit-Matth/Personal-Doctor/assets/146843890/64000ab6-73da-41c2-b2e9-d1f9add91f4a)
+![forDoctors](https://github.com/Ankit-Matth/Personal-Doctor/assets/146843890/6dae26ff-f173-4341-bf56-8b2a5d1ec9f9)
 
 ![page404](https://github.com/Ankit-Matth/Personal-Doctor/assets/146843890/1d70192c-d91d-4674-826f-23bc445fb342)
 
