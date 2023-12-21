@@ -56,14 +56,16 @@ app.post("/feedback",async (req,res)=>{
 })
 app.post("/patient",async (req,res)=>{
   try {
-    const details = await patient.findOne({userName:req.body.Username})
+    var currentName = req.body.Username.trim().split(" ").join("")
+    currentName = currentName.charAt(0).toUpperCase() + currentName.slice(1).toLowerCase()
+    const details = await patient.findOne({userName:currentName})
 
     if (details) {
       res.status(409).send("Username already exists");
     } 
     else{
       const patientadding = new patient({
-        userName: req.body.Username,
+        userName: currentName,
         phoneNo: req.body.Phone,
         email: req.body.Email,
         password: req.body.Password,
@@ -102,11 +104,13 @@ app.post("/booking",async (req,res)=>{
     if (req.body.description.trim() === "") {
       res.send("The description cannot be null...")
     } else{
+    var doctorName = req.body.nameOfDoctor.trim().split(" ").join("")
+    doctorName = doctorName.charAt(0).toUpperCase() + doctorName.slice(1).toLowerCase()
     const bookingadding = new booking({
       userName: req.body.username,
       phoneNo: req.body.Phone,
       email: req.body.email,
-      docUserName: req.body.nameOfDoctor.charAt(0).toUpperCase() + req.body.nameOfDoctor.slice(1),
+      docUserName: doctorName,
       date: req.body.date,
       time: req.body.time,
       description: req.body.description,
