@@ -59,9 +59,10 @@ app.post("/patient",async (req,res)=>{
     var currentName = req.body.Username.trim().split(" ").join("")
     currentName = currentName.charAt(0).toUpperCase() + currentName.slice(1).toLowerCase()
     const details = await patient.findOne({userName:currentName})
+    const docDetails = await doctor.findOne({username:currentName})
 
-    if (details) {
-      res.status(409).send("Username already exists");
+    if (details || docDetails) {
+      res.status(409).send("Username already exists. Please, try like this <b>"+req.body.Username.trim().split(" ").join("")+"123...</b>");
     } 
     else{
       const patientadding = new patient({
@@ -101,11 +102,14 @@ app.post("/application",async (req,res)=>{
 })
 app.post("/booking",async (req,res)=>{
   try {
-    if (req.body.description.trim() === "") {
-      res.send("The description cannot be null...")
-    } else{
     var doctorName = req.body.nameOfDoctor.trim().split(" ").join("")
     doctorName = doctorName.charAt(0).toUpperCase() + doctorName.slice(1).toLowerCase()
+    const dataDoctor = await doctor.findOne({username:doctorName})
+    if (req.body.description.trim() === "") {
+      res.send("The description cannot be null...")
+    } else if(!dataDoctor){
+      res.send(doctorName + " not exist in our database. Please, fill the correct username of doctor...")
+    } else{
     const bookingadding = new booking({
       userName: req.body.username,
       phoneNo: req.body.Phone,
@@ -126,11 +130,12 @@ app.post("/booking",async (req,res)=>{
 })
 app.post("/patientLogin", async (req,res)=>{
   try {
-    const username = req.body.Username
+    var username = req.body.Username.trim().split(" ").join("")
+    username = username.charAt(0).toUpperCase() + username.slice(1).toLowerCase()
     const password = req.body.Password
 
     const data = await patient.findOne({userName:username})
-    if(data.password == password){
+    if(data.password === password){
       res.status(201).render("index",{data:data})
     } else{
       res.send("Password is not matching...")
@@ -141,11 +146,12 @@ app.post("/patientLogin", async (req,res)=>{
 })
 app.post("/doctorLogin", async (req,res)=>{
   try {
-    const usernameDoc = req.body.Username
+    var usernameDoc = req.body.Username.trim().split(" ").join("")
+    usernameDoc = usernameDoc.charAt(0).toUpperCase() + usernameDoc.slice(1).toLowerCase()
     const passwordDoc = req.body.Password
 
     const dataDoctor = await doctor.findOne({username:usernameDoc})
-    if(dataDoctor.password == passwordDoc){
+    if(dataDoctor.password === passwordDoc){
       res.status(201).render("index",{dataDoctor:dataDoctor})
     } else{
       res.send("Password is not matching...")
