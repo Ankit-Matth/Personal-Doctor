@@ -5,15 +5,19 @@
 }
 
 #logoIcon {
-    height: 10vh;
+    height: 3.8rem;
 }
 
 #logoIconHome {
-    margin-left: 12px;
+    margin-left: 0.8rem;
 }
 
 .sticky-top {
     box-shadow: 0px 2px 7px rgb(15, 15, 15);
+}
+
+#header {
+    z-index: 1000;
 }
 
 #signUpbtn {
@@ -48,7 +52,7 @@
 #footer {
     padding: 0 0 5px 0px;
     color: white;
-    font-size: 14px;
+    font-size: 0.9rem;
     margin-top: 5px;
     background-color: #000000;
 }
@@ -182,7 +186,7 @@
         color: rgb(17, 196, 157) !important;
     }
 
-    #footer .footer-top {
+    /* #footer .footer-top {
         padding-top: 45px;
     }
 
@@ -194,29 +198,29 @@
     #footer .footer-top .footer-links {
         margin-bottom: 16px;
         margin-top: 7px;
-    }
+    } */
 }
 
 @media screen and (max-width: 595px) {
     #logoIcon {
-        height: 8vh;
+        height: 3rem;
     }
 
     .nav-link:hover {
         color: rgb(17, 196, 157) !important;
     }
 
-    #footer .copyright {
+    /* #footer .copyright {
         float: none;
         margin-bottom: 15px;
     }
 
     #footer .credits {
         float: none;
-    }
+    } */
 }
 
-@media screen and (max-width: 772px) {
+/* @media screen and (max-width: 772px) {
     #footer .footer-top .footer-contact {
         margin-bottom: 26px;
         margin-top: 7px;
@@ -226,15 +230,15 @@
         margin-bottom: 26px;
         margin-top: 7px;
     }
-}
+} */
 
 @media screen and (max-width: 485px) {
     #logoIcon {
-        height: 6vh;
+        height: 2.3rem;
     }
 
     #logoIconHome {
-        font-size: 14px;
+        font-size: 1rem;
         margin-left: 10px;
     }
 
@@ -249,5 +253,18 @@
 
     .nav-link:hover {
         color: rgb(17, 196, 157) !important;
+    }
+}
+@media screen and (max-width: 983px){
+    html {
+        font-size: 75%;
+    }
+    #navbarSupportedContent {
+        position: absolute;
+        top: 5.7rem; 
+        left: 0;
+        width: 100%;
+        background-color: white;
+        z-index: 1000;
     }
 }

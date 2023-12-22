@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {{!-- <meta name="viewport" content="width=device-width, initial-scale=1"> --}}
     <title>Personal-Doctor | Home</title>
     <link rel="shortcut icon" href="/static/images/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="/static/css/navbar.css">
@@ -14,7 +14,7 @@
 
 <body style="background-color: rgb(235, 226, 212);">
     {{>header data=data dataDoctor=dataDoctor}}
-    <div class="container-fluid">
+    <div class="container-fluid p-0">
         <div class="row">
             <div class="col-md-12">
                 <div class="main" id="main"></div>
@@ -30,77 +30,79 @@
             </div>
         </div>
     </div>
-    <div class="container mb-5">
-        <div class="row py-5">
-            <div class="col-lg-5 m-auto text-center">
-                <h1>Our Health Experts</h1>
+    <div class="container-fluid p-5 pb-1">
+    <div class="row py-5">
+        <div class="col-lg-5 m-auto text-center">
+            <h1>Our Health Experts</h1>
+        </div>
+    </div>
+    <div class="row m-2">
+        <div class="col-lg-3 col-md-3 col-sm-6 text-center">
+            <div class="card border-0 bg-light mb-6">
+                <div class="card-body"> <img src="/static/images/doctor-01.jpg" class="img-fluid" alt=""> </div>
+                <h3>Dr. Nisha</h3>
+                <h5 class="mb-4">Neurologist</h5>
             </div>
         </div>
-        <div class="row">
-            <div class="col-lg-3 text-center">
-                <div class="card border-0 bg-light mb-2">
-                    <div class="card-body"> <img src="/static/images/doctor-01.jpg" class="img-fluid" alt=""> </div>
-                    <h3>Dr. Nisha</h3>
-                    <h5 class="mb-4">Neurologist</h5>
-                </div>
-            </div>
-            <div class="col-lg-3 text-center">
-                <div class="card border-0 bg-light mb-2">
-                    <div class="card-body"> <img src="/static/images/doctor-02.jpg" class="img-fluid" alt=""> </div>
-                    <h3>Dr. Siddhartha</h3>
-                    <h5 class="mb-4">Heart Specialist</h5>
-                </div>
-            </div>
-            <div class="col-lg-3 text-center">
-                <div class="card border-0 bg-light mb-2">
-                    <div class="card-body"> <img src="/static/images/doctor-03.jpg" class="img-fluid" alt=""> </div>
-                    <h3>Dr. Manju</h3>
-                    <h5 class="mb-4">Orthopedist</h5>
-                </div>
-            </div>
-            <div class="col-lg-3 text-center">
-                <div class="card border-0 bg-light mb-2">
-                    <div class="card-body"> <img src="/static/images/doctor-04.jpg" class="img-fluid" alt=""> </div>
-                    <h3>Dr. Ashish</h3>
-                    <h5 class="mb-4">Cardiologist</h5>
-                </div>
+        <div class="col-lg-3 col-md-3 col-sm-6 text-center">
+            <div class="card border-0 bg-light mb-6">
+                <div class="card-body"> <img src="/static/images/doctor-02.jpg" class="img-fluid" alt=""> </div>
+                <h3>Dr. Siddhartha</h3>
+                <h5 class="mb-4">Heart Specialist</h5>
             </div>
         </div>
-        <div class="row mt-4">
-            <div class="col-lg-3 text-center">
-                <div class="card border-0 bg-light mb-2">
-                    <div class="card-body"> <img src="/static/images/doctor-05.jpg" class="img-fluid" alt=""> </div>
-                    <h3>Aditya Gupta</h3>
-                    <h5 class="mb-4">Psychiatrist</h5>
-                </div>
+        <div class="col-lg-3 col-md-3 col-sm-6 text-center">
+            <div class="card border-0 bg-light mb-6">
+                <div class="card-body"> <img src="/static/images/doctor-03.jpg" class="img-fluid" alt=""> </div>
+                <h3>Dr. Manju</h3>
+                <h5 class="mb-4">Orthopedist</h5>
             </div>
-            <div class="col-lg-3 text-center">
-                <div class="card border-0 bg-light mb-2">
-                    <div class="card-body"> <img src="/static/images/doctor-06.jpg" class="img-fluid" alt=""> </div>
-                    <h3>Dr. Anjali</h3>
-                    <h5 class="mb-4">Eye Specialist</h5>
-                </div>
-            </div>
-            <div class="col-lg-3 text-center">
-                <div class="card border-0 bg-light mb-2">
-                    <div class="card-body"> <img src="/static/images/doctor-07.jpg" class="img-fluid" alt=""> </div>
-                    <h3>Dr. Manisha</h3>
-                    <h5 class="mb-4" id="pricing">Dermatologist</h5>
-                </div>
-            </div>
-            <div class="col-lg-3 text-center">
-                <div class="card border-0 bg-light mb-2">
-                    <div class="card-body"> <img src="/static/images/doctor-08.png" class="img-fluid" alt=""> </div>
-                    <h3>Many more...</h3>
-                    <h5><a href="/doctorApplication" id="forDoctor" class="btn"><b>Join us as a Doctor</a></h5>
-                </div>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-6 text-center">
+            <div class="card border-0 bg-light mb-6">
+                <div class="card-body"> <img src="/static/images/doctor-04.jpg" class="img-fluid" alt=""> </div>
+                <h3>Dr. Ashish</h3>
+                <h5 class="mb-4">Cardiologist</h5>
             </div>
         </div>
     </div>
-    <div class="col-lg-5 m-auto text-center">
+    <div class="row m-2 mt-3">
+        <div class="col-lg-3 col-md-3 col-sm-6 text-center">
+            <div class="card border-0 bg-light mb-6">
+                <div class="card-body"> <img src="/static/images/doctor-05.jpg" class="img-fluid" alt=""> </div>
+                <h3>Aditya Gupta</h3>
+                <h5 class="mb-4">Psychiatrist</h5>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-6 text-center">
+            <div class="card border-0 bg-light mb-6">
+                <div class="card-body"> <img src="/static/images/doctor-06.jpg" class="img-fluid" alt=""> </div>
+                <h3>Dr. Anjali</h3>
+                <h5 class="mb-4">Eye Specialist</h5>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-6 text-center">
+            <div class="card border-0 bg-light mb-6">
+                <div class="card-body"> <img src="/static/images/doctor-07.jpg" class="img-fluid" alt=""> </div>
+                <h3>Dr. Manisha</h3>
+                <h5 class="mb-4" id="pricing">Dermatologist</h5>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-6 text-center">
+            <div class="card border-0 bg-light mb-6">
+                <div class="card-body"> <img src="/static/images/doctor-08.png" class="img-fluid" alt=""> </div>
+                <h3>Many more...</h3>
+                <h5><a href="/doctorApplication" id="forDoctor" class="btn"><b>Join us as a Doctor</a></h5>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="container-fluid p-5">
+        <div class="col-lg-5 m-auto pb-4 text-center">
         <h1>How it Works?</h1>
     </div>
-    <div class="container my-5 bg-light p-3 pt-5 border rounded">
+    <div class="m-2 my-5 bg-light p-3 pt-5 border rounded">
         <h2 class="px-4" style="font-size: 40px;">For Patients</h2>
         <div class="stepper">
             <div class="step">
@@ -145,7 +147,7 @@
             </div>
         </div>
     </div>
-    <div class="container my-5 bg-light  p-3 pt-5 border rounded">
+     <div class="m-2 my-5 bg-light  p-3 pt-5 border rounded">
         <h2 class="px-4" style="font-size: 40px;">For Doctors</h2>
         <div class="stepper">
             <div class="step">
@@ -190,6 +192,8 @@
             </div>
         </div>
     </div>
+    </div>
+   
     {{>footer}}
      <div class="modal fade" id="loadingModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">

@@ -2,7 +2,7 @@
 <html lang="en">
    <head>
       <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
+      {{!-- <meta name="viewport" content="width=device-width, initial-scale=1"> --}}
       <title>Doctor Dashboard | Personal-Doctor</title>
       <link rel="shortcut icon" href="/static/images/favicon.png" type="image/x-icon">
       <link rel="stylesheet" href="/static/css/navbar.css">
@@ -14,7 +14,7 @@
       <div class="content">
          <div class="container-fluid">
             <div class="row">
-               <div class="col-md-12 col-lg-4 col-xl-3 theiaStickySidebar">
+               <div class="col-md-3 col-sm-3 col-lg-3 col-xl-3 theiaStickySidebar">
                   <div class="card">
                      <div class="card-header">
                         <h4 class="card-title mb-0 p-3">
@@ -22,11 +22,11 @@
                         </h4>
                      </div>
                      <div class="card-body">
-                        <div> <a class="btn btn-primary col-lg-12 m-1 p-2 px-3" href="/dashboard" style="text-align: left !important;">Doctor Dashboard</a> <a class="btn btn-primary col-lg-12 m-1 p-2 px-3" href="/pendingRequests" style="text-align: left !important;">Pending Requests</a> <a class="btn btn-primary col-lg-12 m-1 p-2 px-3" href="/doctorApplication" style="text-align: left !important;">Doctor Application</a> <a class="btn btn-primary col-lg-12 m-1 p-2 px-3" href="/contact" style="text-align: left !important;">Payment not received</a> </div>
+                        <div> <a class="btn btn-primary col-lg-12 col-md-12 col-sm-12 m-1 p-2 px-3" href="/dashboard" style="text-align: left !important;">Doctor Dashboard</a> <a class="btn btn-primary col-lg-12 col-md-12 col-sm-12 m-1 p-2 px-3" href="/pendingRequests" style="text-align: left !important;">Pending Requests</a> <a class="btn btn-primary col-lg-12 col-md-12 col-sm-12 m-1 p-2 px-3" href="/doctorApplication" style="text-align: left !important;">Doctor Application</a> <a class="btn btn-primary col-lg-12 col-md-12 col-sm-12 m-1 p-2 px-3" href="/contact" style="text-align: left !important;">Payment not received</a> </div>
                      </div>
                   </div>
                </div>
-               <div class="col-md-12 col-lg-8 col-xl-9">
+               <div class="col-md-9 col-sm-9 col-lg-9 col-xl-9">
                   <div class="card m-3 bg-light p-3 text-center bg-dark text-white">
                      <h1>Upcoming Appointments</h1>
                   </div>
@@ -34,7 +34,7 @@
                   {{#ifEquals isAccepted "true"}}
                   <div class="card m-3 bg-dark p-2 px-4" docUserName="{{docUserName}}" style="display: none;">
                      <div class="carBody d-flex">
-                        <div class="col-lg-6 d-flex align-items-center p-3" style="justify-content: space-between;">
+                        <div class="col-md-6 col-sm-6 col-lg-6 col-xl-6 d-flex align-items-center p-3" style="justify-content: space-between;">
                            <div class="details">
                               <h3 class="text-white">Username - {{userName}}</h3>
                               <div class="rating"> 
@@ -44,7 +44,7 @@
                            </div>
                            <div class="date"> <a href="#" class="btn btn-secondary">{{date}}</a> </div>
                         </div>
-                        <div class="col-lg-6 d-flex align-items-center" style="justify-content: space-between;">
+                        <div class="col-md-6 col-sm-6 col-lg-6 col-xl-6 d-flex align-items-center" style="justify-content: space-between;">
                            <div class="time"> <a href="#" class="btn btn-secondary">{{time}}</a> </div>
                            <div class="appointment-action">
                               <a href="#" class="btn btn-sm btn-outline-info mx-1" data-bs-toggle="modal" data-bs-target="#C{{_id}}"> <i class="far fa-eye"></i> View </a>

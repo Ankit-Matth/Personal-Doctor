@@ -2,7 +2,7 @@
 <html lang="en">
    <head>
       <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
+      {{!-- <meta name="viewport" content="width=device-width, initial-scale=1"> --}}
       <title>Search Doctor | Personal-Doctor</title>
       <link rel="shortcut icon" href="/static/images/favicon.png" type="image/x-icon">
       <link rel="stylesheet" href="/static/css/navbar.css">
@@ -14,7 +14,7 @@
       <div class="content">
          <div class="container-fluid">
             <div class="row">
-               <div class="col-md-12 col-lg-4 col-xl-3 theiaStickySidebar mt-4">
+               <div class="col-md-3 col-lg-4 col-xl-3 theiaStickySidebar mt-4">
                   <div class="card search-filter bg-light">
                      <div class="card-header">
                         <h4 class="card-title mb-0">Search Filter</h4>
@@ -71,14 +71,14 @@
                      </div>
                   </div>
                </div>
-               <div class="col-md-12 col-lg-8 col-xl-9">
+               <div class="col-md-9 col-lg-8 col-xl-9">
                   <div class="card m-3 text-center bg-dark">
-                     <h2 class="m-3 text-white">Please select checkboxes based on your requirements.</h2>
+                     <h2 class="m-3 text-white" style="font-size: 2rem;">Please select checkboxes based on your requirements.</h2>
                   </div>
                   {{#each dataDoctor}}
                   <div class="card m-3" style="display: none;" gender="{{gender}}" speciality="{{speciality}}">
                      <div class="carBody d-flex">
-                        <div class="left col-lg-6 p-3 px-5">
+                        <div class="left col-lg-6 col-md-6 p-3 px-5">
                            <h1>{{username}}</h1>
                            <h6>{{education}}</h6>
                            <h5>{{speciality}} ({{gender}})</h5>
@@ -90,7 +90,7 @@
                               <i class="fa-sharp fa-solid fa-location-dot" style="color: #686464;"></i> {{location}}
                            </div>
                         </div>
-                        <div class="right col-lg-6 d-grid align-items-center px-2">
+                        <div class="right col-lg-6 col-md-6 d-grid align-items-center px-2">
                            <div class="d-grid gap-2">
                               <a href="" class="btn btn-primary m-2" role="button" data-bs-toggle="modal" data-bs-target="#A{{_id}}">More details</a>
                               <div class="modal fade" id="A{{_id}}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="businessHoursLabel" aria-hidden="true">

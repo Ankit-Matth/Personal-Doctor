@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        {{!-- <meta name="viewport" content="width=device-width, initial-scale=1" /> --}}
         <title>Pending Requests | Personal-Doctor</title>
         <link rel="shortcut icon" href="/static/images/favicon.png" type="image/x-icon" />
         <link rel="stylesheet" href="/static/css/navbar.css" />
@@ -11,16 +11,16 @@
     </head>
     <body>
         {{>header}}
-        <div class="col-md-12 col-lg-8 col-xl-11 m-auto mt-5">
+        <div class="col-md-11 col-lg-11 col-xl-11 m-auto mt-5">
             <div class="card m-3 bg-light p-3 text-center bg-dark text-white">
                 <h1>Pending Requests</h1>
             </div>
         </div>
         {{#each dataBookings}} {{#ifEquals isAccepted "undefined"}}
-        <div class="col-md-12 col-lg-8 col-xl-11 m-auto" docUserName="{{docUserName}}" style="display: none;">
+        <div class="col-md-11 col-lg-11 col-xl-11 m-auto" docUserName="{{docUserName}}" style="display: none;">
             <div class="card m-3 p-2 px-4 mt-3 bg-dark">
                 <div class="carBody d-flex">
-                    <div class="col-lg-6 d-flex align-items-center p-3" style="justify-content: space-between;">
+                    <div class="col-md-6 col-lg-6 col-xl-6 d-flex align-items-center p-3" style="justify-content: space-between;">
                         <div class="details">
                             <h5 class="text-white">Username - {{userName}}</h5>
                             <div class="rating">
@@ -30,7 +30,7 @@
                         </div>
                         <div class="date"><a href="#" class="btn btn-secondary">{{date}}</a></div>
                     </div>
-                    <div class="col-lg-6 d-flex align-items-center" style="justify-content: space-between;">
+                    <div class="col-md-6 col-lg-6 col-xl-6 d-flex align-items-center" style="justify-content: space-between;">
                         <div class="time"><a href="#" class="btn btn-secondary">{{time}}</a></div>
                         <div class="appointment-action">
                             <a href="#" class="btn btn-sm btn-outline-info mx-1" data-bs-toggle="modal" data-bs-target="#C{{_id}}"> <i class="far fa-eye"></i> View </a>
