@@ -24,6 +24,8 @@ The project leverages the following technologies:
 - ChatGPT (API)
 - Handlebars (.hbs)
 
+### For a quick demo (screen recording) of our project, please visit the `Personal-Doctor/ScreenRecording` directory.
+
 ### Test Users
 **Doctor**  
  *Username* : Ravi,
