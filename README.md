@@ -1,52 +1,84 @@
-# Personal-Doctor
+# Personal Doctor
 
-In underserved regions where access to healthcare is limited, and in scenarios where individuals seek online medical consultations at minimal or no cost, Personal Doctor emerges as a solution. This platform acts as a bridge, facilitating interactions between users and certified healthcare professionals through online chat and audio-video calls. Moreover, it offers a valuable resource by providing information about various medicines and their uses.
+I have participated in [hackUniv](https://www.hackuniv.com/) (a hackathon organized by Repozitory Technologies Pvt. Ltd. at GJUST, Hisar), with my classmate [Parhlad Singh](https://github.com/parhladSingh). Together, we worked on a project - *Personal Doctor*. Parhlad created the design (frontend) for it, and I focused on making it work well (backend). Our aim was to make healthcare more accessible. We combined our skills to make Personal Doctor a reality. It was challenging, but we felt proud of our accomplishment.
 
-## Project Objectives
+## Problem Statement
 
-### 1. Accessibility of Healthcare
-Personal Doctor addresses the challenge of limited access to quality healthcare in rural and underserved areas. By connecting patients with willing doctors for online consultations, we aim to make healthcare more accessible for minor problems and consultations.
+There are mainly two problems:
 
-### 2. Information about Medicines
-To enhance patient understanding, Personal Doctor offers a comprehensive database of medications and their uses. Users can easily search for medications by name to gain insights into their purposes.
+### 1. Lack of access to healthcare:
+India has a significant shortage of qualified doctors and quality healthcare facilities, especially in rural or backward areas. The best hospitals are mostly established in cities. This shortage leads to many problems, including:
+
+**a. Inaccessibility:** Many people in rural areas cannot afford frequent urban travel for medical care. Even if they can do so, they often face long waits and other logistical challenges.
+
+**b. Misinformation:** In the absence of qualified doctors, people may turn to traditional healers or self-medicate. Many times, less educated people in backward areas buy medicines directly from medical shops without consulting a doctor. This may lead to misdiagnosis and inappropriate treatment. 
+
+**c. Inadequate care:** Even when people are able to access health care, the quality of care may be poor. This is because many doctors in rural areas are undertrained or overworked. According to a WHO report, the IMA (Indian Medical Association) claims that about 1 million quacks practice treatment in India, of which 600,000 practice allopathic treatment.
+Due to these problems, sometimes small diseases become big disasters and can cause death. 
+
+### 2. Cost of Healthcare:
+Quack doctors often exploit the scarcity of good doctors, charging extra fees from needy patients. People avoid seeking medical help due to financial constraints or pay high costs for consultations. Apart from this there are some doctors who are willing to provide their consultation services at low cost or for free in their free time for welfare, but they lack a reliable platform.
+
+## Our Solution
+
+To address these issues, Personal Doctor emerges as a solution by connecting these people in rural areas with certified doctors through online chat, audio, or video calls. Online consultations provide various benefits:
+
+a. patients can connect with high-qualified doctors to verify treatments prescribed by local doctors.</br>
+b. patients can get advice or consult with a doctor for minor issues, symptoms, stress, anxiety, etc.</br>
+c. Patients can consult a doctor in online consultancy and buy the medicine prescribed by the doctor from any medical shop and get their disease treated.
+
+Since we provide a seamless rating system between patients and doctors, doctors can easily create their branding on the platform by providing their services at low cost, thus creating greater competition on the price, i.e. making healthcare affordable for all irrespective of their financial status. As is obvious, prices will fall due to excessive competition.
+
+Additionally, we have also integrated the power of ChatGPT into this platform to make it more attractive. Many times, people forget why they were prescribed a certain medicine, Personal Doctor provides information about the use of medicines by generating responses using ChatGPT. Patients can easily search for a specific medicine by its name through the user-friendly interface provided by the platform.
+
+**Our mission** at Personal Doctor is to make healthcare accessible to everyone, irrespective of their financial status and location. We welcome doctors who wish to provide their services for free, and we do not charge for these services. However, for those who earn money by providing consultations on our platform, we apply a nominal 5% commission to their revenue. This commission serves as a sustainable business model for our platform.
 
 ## Technologies Used
-
-The project leverages the following technologies:
 
 - HTML
 - CSS
 - JavaScript
 - Bootstrap
 - Node.js
-- MongoDB
 - Express.js
+- MongoDB
 - ChatGPT (API)
 - Handlebars (.hbs)
 
-### For a quick demo (screen recording) of our project, please visit the `Personal-Doctor/ScreenRecording` directory.
+My teammate Parhlad worked on the front-end – that's the part you see and interact with. He used HTML to create the structure of our web pages, CSS to make them look good and work on any device, and JavaScript to add dynamic interactions. He also used bootstrap, a pre-built framework, to make things quickly and keep them looking consistent.
+
+On the backend, for the server-side operations, I chose Node.js, a robust JavaScript runtime environment. It keeps everything running smoothly. MongoDB is our data's home – a flexible NoSQL database efficiently storing and managing the diverse information crucial to our project. To structure our web applications, I've implemented Express.js, a minimalist web framework for Node.js. It provides a structured approach to building web applications, ensuring a seamless user experience.
+
+But that's not all. We've incorporated some cutting-edge technologies to take our project to the next level:
+
+The **ChatGPT API** is our secret weapon for intelligent interactions. It's a state-of-the-art language model that delivers information about the uses of medicines by generating responses using ChatGPT. And to keep our code efficient and maintainable, I've integrated the Handlebars (.hbs) Templating Engine. It's a smart tool that efficiently generates dynamic content, that ensures our users have a smooth and engaging experience.
+
+## Third party partners
+
+1. Zegocloud (Pre-built UIKits) - Used for Voice & Video Calls
+
+2. CometChat (Live Chat Widgets) - Used for Realtime Chatting
+
+3. Cosmofeed (Payment Gateway) - Used for Online Payments
+
+As a beginner with time constraints due to university exams, this approach allows us to rapidly integrate essential features without delving into extensive coding. However, these can be easily implemented by using simple Javascript libarires like WebRTC, socket.io etc.
 
 ### Test Users
-**Doctor**  
- *Username* : Ravi,
- *Password* : 12345  
- 
-**Patient**  
- *Username* : Amit,
- *Password* : amit@789
+
+**Doctor -**  *Username* : Ravi, *Password* : 12345  
+
+**Patient -**  *Username* : Amit,*Password* : amit@789
  
 ## Prerequisites & Installation Steps
 
 Follow these steps to set up the project on your local machine:
 
-### Cloning the Repository
-
 1. **Download Node.js:** Ensure you have the latest version of Node.js installed.
+
 2. **Clone the Repository:** Run the following command in your terminal:
     ```bash
     git clone https://github.com/Ankit-Matth/Personal-Doctor.git
     ```
-
 3. **Navigate to the Project Directory:**
     ```bash
     cd Personal-Doctor
@@ -81,9 +113,6 @@ Follow these steps to set up the project on your local machine:
 node src/app.js
 ```
 
-## Demo Payment Link
-https://cosmofeed.com/vp/656452ee5929eb0029dd5ae2
-
 ## Features provided by us
 
 1. **Remote Access to Certified Doctors:**
@@ -107,12 +136,10 @@ https://cosmofeed.com/vp/656452ee5929eb0029dd5ae2
 7. **Dedicated Customer Support:**
    - Access 24/7 assistance for a seamless and reliable healthcare experience.
 
-### Some popular screenshots of our platform  
+## Quick Demo
 
-![forPatients](https://github.com/Ankit-Matth/Personal-Doctor/assets/146843890/3afcb266-4a35-49ca-8b6f-1e55c6460d2d)
+- **Live link** - https://ankit-matth.github.io/tic-tac-toe/
 
-![forDoctors](https://github.com/Ankit-Matth/Personal-Doctor/assets/146843890/6dae26ff-f173-4341-bf56-8b2a5d1ec9f9)
+- **Payment link** - https://cosmofeed.com/vp/656452ee5929eb0029dd5ae2
 
-![page404](https://github.com/Ankit-Matth/Personal-Doctor/assets/146843890/1d70192c-d91d-4674-826f-23bc445fb342)
-
-![paracetamolUses](https://github.com/Ankit-Matth/Personal-Doctor/assets/146843890/6e5e9656-4762-444c-9839-fbb8c9c659ab)
+### For full demo (screen recording) of our project, please visit the `Personal-Doctor/ScreenRecording` directory.
