@@ -94,7 +94,7 @@ Follow these steps to set up the project on your local machine:
     npm install
     ```
 
-7. **Run the Application:**
+7. **Run server:**
     ```bash
     npm start
     ```
@@ -142,4 +142,4 @@ node src/app.js
 
 - **Payment link** - https://cosmofeed.com/vp/656452ee5929eb0029dd5ae2
 
-### For full demo (screen recording) of our project, please visit the `Personal-Doctor/ScreenRecording` directory.
+#### For full demo (screen recording) of our project, please visit the `Personal-Doctor/ScreenRecording` directory.
