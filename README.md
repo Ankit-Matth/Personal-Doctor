@@ -31,14 +31,15 @@ Since we provide a seamless rating system between patients and doctors, doctors 
 
 Additionally, we have also integrated the power of ChatGPT into this platform to make it more attractive. Many times, people forget why they were prescribed a certain medicine, Personal Doctor provides information about the use of medicines by generating responses using ChatGPT. Patients can easily search for a specific medicine by its name through the user-friendly interface provided by the platform.
 
-**Our mission** at Personal Doctor is to make healthcare accessible to everyone, irrespective of their financial status and location. We welcome doctors who wish to provide their services for free, and we do not charge for these services. However, for those who earn money by providing consultations on our platform, we apply a nominal 5% commission to their revenue. This commission serves as a sustainable business model for our platform.
+**Our mission** at Personal Doctor is to make healthcare accessible to everyone, irrespective of their financial status and location. We welcome doctors who wish to provide their services for free, and we do not charge for these services. However, for those who earn money by providing consultations on our platform, we apply a nominal 5% commission to their revenue. This commission serves as a **sustainable business model** for our platform.
 
 ## Technologies Used
-
+#### For frontend (designed by Parhlad) -
 - HTML
 - CSS
 - JavaScript
 - Bootstrap
+#### For backend (developed by Me) -
 - Node.js
 - Express.js
 - MongoDB
