@@ -68,7 +68,7 @@ As a beginner with time constraints due to university exams, this approach allow
 
 **Doctor -**  *Username* : Ravi, *Password* : 12345  
 
-**Patient -**  *Username* : Amit,*Password* : amit@789
+**Patient -**  *Username* : Amit, *Password* : amit@789
  
 ## Prerequisites & Installation Steps
 
@@ -139,7 +139,7 @@ node src/app.js
 
 ## Quick Demo
 
-- **Live link** - https://ankit-matth.github.io/tic-tac-toe/
+- **Live link** - https://personaldoctor.onrender.com/
 
 - **Payment link** - https://cosmofeed.com/vp/656452ee5929eb0029dd5ae2
 
