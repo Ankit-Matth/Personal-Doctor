@@ -218,3 +218,6 @@ const PORT = process.env.PORT || 8089;
 app.listen(PORT, ()=>{
     console.log(`server is responding at http://localhost:${PORT}/`)
 })
+
+// Export the Express API
+module.exports = app;
