@@ -1,6 +1,6 @@
 # Personal Doctor
 
-I have participated in [hackUniv](https://www.hackuniv.com/) (a hackathon organized by Repozitory Technologies Pvt. Ltd. at GJUST, Hisar), with my classmate [Parhlad Singh](https://github.com/parhladSingh). Together, we worked on a project - *Personal Doctor*. Parhlad created the design (frontend) for it, and I focused on making it work well (backend). Our aim was to make healthcare more accessible. We combined our skills to make Personal Doctor a reality. It was challenging, but we felt proud of our accomplishment.
+I have participated in [HackUniv](https://www.hackuniv.com/) (a hackathon organized by Repozitory Technologies Pvt. Ltd. at GJUST, Hisar), with my classmate [Parhlad Singh](https://github.com/parhladSingh). Together, we worked on a project - *Personal Doctor*. Parhlad created the design (frontend) for it, and I focused on making it work well (backend). Our aim was to make healthcare more accessible. We combined our skills to make Personal Doctor a reality. It was challenging, but we felt proud of our accomplishment.
 
 ## Problem Statement
 
@@ -139,8 +139,8 @@ node src/app.js
 
 ## Quick Demo
 
-- **Live link** - https://personaldoctor.onrender.com/
-
+- **Live link** - https://personal-doctor.vercel.app/
+  
 - **Payment link** - https://cosmofeed.com/vp/656452ee5929eb0029dd5ae2
 
-#### For full demo (screen recording) of our project, please visit the `Personal-Doctor/ScreenRecording` directory.
+#### For full demo (screen recording) of our project, please visit the [LinkedIn post.](https://www.linkedin.com/posts/ankit-matth_personalabrdoctor-html-css-activity-7162015994641571840-2z1x?utm_source=share&utm_medium=member_desktop)
