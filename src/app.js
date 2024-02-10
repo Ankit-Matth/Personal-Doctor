@@ -1,6 +1,7 @@
 const express = require("express")
 const hbs = require("hbs")
 const app = express()
+const path = require('path');
 
 const OpenAI = require('openai')
 require('dotenv').config()
@@ -13,11 +14,11 @@ const mongoose = require("mongoose")
 
 const routes = require('./routes/main')
 
-app.use('/static',express.static("public"))
+app.use('/static', express.static(path.join(__dirname, '../public')));
 app.use('',routes)
 
-app.set('view engine','hbs')
-app.set('views','views')
+app.set('view engine', 'hbs');
+app.set('views', path.join(__dirname, '../views'));
 hbs.registerPartials("views/partials")
 
 require('dotenv').config()
