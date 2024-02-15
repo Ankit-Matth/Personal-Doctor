@@ -23,12 +23,18 @@ hbs.registerPartials("views/partials")
 
 require('dotenv').config()
 
-// mongodb connection
-mongoose.connect(process.env.MONGO_URL).then(() => { 
-  console.log("Database connected...");
-}).catch((e) => {
-  console.error("Error connecting to MongoDB:", e);
-});
+const connectMongoDB = async () => {
+  try {
+    await mongoose.connect(process.env.MONGO_URL);
+    console.log("Database connected.");
+  } catch (error) {
+    console.error("Error connecting to MongoDB:", error);
+    // Retry connection after 1 seconds
+    setTimeout(connectMongoDB, 1000);
+  }
+}
+
+connectMongoDB();
 
 const { json } = require("body-parser")
 const feedback = require("./models/feedback")
