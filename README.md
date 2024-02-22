@@ -16,7 +16,7 @@ India has a significant shortage of qualified doctors and quality healthcare fac
 
 **b. Misinformation:** In the absence of qualified doctors, people may turn to traditional healers or self-medicate. Many times, less educated people in backward areas buy medicines directly from medical shops without consulting a doctor. This may lead to misdiagnosis and inappropriate treatment. 
 
-Due to the problems, sometimes small diseases become big disasters and can cause death. According to a report from Statista, published in The Times of India, approximately five million people die every year — almost a third of them in India (1.6 million) — due to Lack of access to healthcare.
+Due to these problems, sometimes small diseases become big disasters and can cause death. According to a report from Statista, published in The Times of India, approximately five million people die every year — almost a third of them in India (1.6 million) — due to Lack of access to healthcare.
 
 ## Our Solution
 
