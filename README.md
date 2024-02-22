@@ -6,18 +6,17 @@ I have participated in [HackUniv](https://www.hackuniv.com/) (a hackathon organi
 
 There are mainly two problems:
 
-### 1. Lack of access to healthcare:
+### 1. Cost of Healthcare:
+Quack doctors often exploit the scarcity of good doctors, charging extra fees from needy patients. People avoid seeking medical help due to financial constraints or pay high costs for consultations. Apart from this there are some doctors who are willing to provide their consultation services at low cost or for free in their free time for welfare, but they lack a reliable platform. Additionally, lack of information about medicines can lead to people forgetting why they were prescribed a certain medication.
+
+### 2. Lack of access to healthcare:
 India has a significant shortage of qualified doctors and quality healthcare facilities, especially in rural or backward areas. The best hospitals are mostly established in cities. This shortage leads to many problems, including:
 
 **a. Inaccessibility:** Many people in rural areas cannot afford frequent urban travel for medical care. Even if they can do so, they often face long waits and other logistical challenges.
 
 **b. Misinformation:** In the absence of qualified doctors, people may turn to traditional healers or self-medicate. Many times, less educated people in backward areas buy medicines directly from medical shops without consulting a doctor. This may lead to misdiagnosis and inappropriate treatment. 
 
-**c. Inadequate care:** Even when people are able to access health care, the quality of care may be poor. This is because many doctors in rural areas are undertrained or overworked. According to a WHO report, the IMA (Indian Medical Association) claims that about 1 million quacks practice treatment in India, of which 600,000 practice allopathic treatment.
-Due to these problems, sometimes small diseases become big disasters and can cause death. 
-
-### 2. Cost of Healthcare:
-Quack doctors often exploit the scarcity of good doctors, charging extra fees from needy patients. People avoid seeking medical help due to financial constraints or pay high costs for consultations. Apart from this there are some doctors who are willing to provide their consultation services at low cost or for free in their free time for welfare, but they lack a reliable platform.
+Due to the problems, sometimes small diseases become big disasters and can cause death. According to a report from Statista, published in The Times of India, approximately five million people die every year — almost a third of them in India (1.6 million) — due to Lack of access to healthcare.
 
 ## Our Solution
 
@@ -63,6 +62,14 @@ The **ChatGPT API** is our secret weapon for intelligent interactions. It's a st
 3. Cosmofeed (Payment Gateway) - Used for Online Payments
 
 As a beginner with time constraints due to university exams, this approach allows us to rapidly integrate essential features without delving into extensive coding. However, these can be easily implemented by using simple Javascript libarires like WebRTC, socket.io etc.
+
+## Quick Demo
+
+- **Live link** - https://personal-doctor.vercel.app/
+  
+- **Payment link** - https://cosmofeed.com/vp/656452ee5929eb0029dd5ae2
+
+#### For full demo (screen recording) of our project, please visit the [LinkedIn post.](https://www.linkedin.com/posts/ankit-matth_personalabrdoctor-html-css-activity-7162015994641571840-2z1x?utm_source=share&utm_medium=member_desktop)
 
 ### Test Users
 
@@ -136,11 +143,3 @@ node src/app.js
 
 7. **Dedicated Customer Support:**
    - Access 24/7 assistance for a seamless and reliable healthcare experience.
-
-## Quick Demo
-
-- **Live link** - https://personal-doctor.vercel.app/
-  
-- **Payment link** - https://cosmofeed.com/vp/656452ee5929eb0029dd5ae2
-
-#### For full demo (screen recording) of our project, please visit the [LinkedIn post.](https://www.linkedin.com/posts/ankit-matth_personalabrdoctor-html-css-activity-7162015994641571840-2z1x?utm_source=share&utm_medium=member_desktop)
