@@ -3,12 +3,14 @@ const hbs = require("hbs")
 const app = express()
 const path = require('path');
 
-const OpenAI = require('openai')
+const { GoogleGenerativeAI } = require("@google/generative-ai");
+const MarkdownIt = require("markdown-it");
+
+const md = new MarkdownIt();
 require('dotenv').config()
 
-const openai = new OpenAI({
-  apiKey: process.env.KEY,
-});
+const genAI = new GoogleGenerativeAI(process.env.KEY);
+const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
 const mongoose = require("mongoose")
 
@@ -172,22 +174,18 @@ app.post("/drugUses", async (req, res) => {
   const drugName = req.body.drugName;
   const capitalizedDrugName = drugName.charAt(0).toUpperCase() + drugName.slice(1);
 
-  const prompt = "Uses of " + capitalizedDrugName;
-  const gptPrompt =
-    "write uses of " + capitalizedDrugName + " in 50 words. -- generate in paragraph -- remember this is a medicine name";
+  const prompt = "Uses of " + capitalizedDrugName + " -- remember this is a medicine name ";
 
   try {
-    const chatResponse = await openai.chat.completions.create({
-      messages: [{ role: 'user', content: gptPrompt }],
-      model: 'gpt-3.5-turbo',
-      // max_tokens: 50
-    });
-  
-    const ans = chatResponse.choices[0].message.content;
-    res.render("drugUses", { ans, prompt });
+    const result = await model.generateContent(prompt);
+    const markdownContent = result.response.text();
+
+    // Convert Markdown content to HTML
+    const ans = md.render(markdownContent);
+    res.render("drugUses", { ans, capitalizedDrugName });
   } catch (error) {
-    const ans = "My OpenAI API free tier has expired. Sorry for the inconvenience."
-    res.render("drugUses", { ans, prompt });
+    const ans = "My API key free tier has been expired. Sorry for the inconvenience."
+    res.render("drugUses", { ans, capitalizedDrugName });
   }
 });
 
