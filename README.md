@@ -1,6 +1,22 @@
+> **Note:** We have switched to using **Google Gemini** instead of ChatGPT due to the availability of a free-tier service from Google. This transition allows us to continue offering intelligent interactions and improve our platform's functionality without the constraints of paid services.
+
 # Personal Doctor
 
 I have participated in [HackUniv](https://www.hackuniv.com/) (a hackathon organized by Repozitory Technologies Pvt. Ltd. at GJUST, Hisar), with my classmate [Parhlad Singh](https://github.com/parhladSingh). Together, we worked on a project - *Personal Doctor*. Parhlad created the design (frontend) for it, and I focused on making it work well (backend). Our aim was to make healthcare more accessible. We combined our skills to make Personal Doctor a reality. It was challenging, but we felt proud of our accomplishment.
+
+## Quick Demo
+
+- **Live link** - https://personal-doctor.vercel.app/
+  
+- **Payment link** - https://cosmofeed.com/vp/656452ee5929eb0029dd5ae2
+
+#### For full demo (screen recording) of our project, please visit the [LinkedIn post.](https://www.linkedin.com/posts/ankit-matth_personalabrdoctor-html-css-activity-7162015994641571840-2z1x?utm_source=share&utm_medium=member_desktop)
+
+### Test Users
+
+**Doctor -**  *Username* : Ravi, *Password* : 12345  
+
+**Patient -**  *Username* : Amit, *Password* : amit@789
 
 ## Problem Statement
 
@@ -62,20 +78,6 @@ The **ChatGPT API** is our secret weapon for intelligent interactions. It's a st
 3. Cosmofeed (Payment Gateway) - Used for Online Payments
 
 As a beginner with time constraints due to university exams, this approach allows us to rapidly integrate essential features without delving into extensive coding. However, these can be easily implemented by using simple Javascript libarires like WebRTC, socket.io etc.
-
-## Quick Demo
-
-- **Live link** - https://personal-doctor.vercel.app/
-  
-- **Payment link** - https://cosmofeed.com/vp/656452ee5929eb0029dd5ae2
-
-#### For full demo (screen recording) of our project, please visit the [LinkedIn post.](https://www.linkedin.com/posts/ankit-matth_personalabrdoctor-html-css-activity-7162015994641571840-2z1x?utm_source=share&utm_medium=member_desktop)
-
-### Test Users
-
-**Doctor -**  *Username* : Ravi, *Password* : 12345  
-
-**Patient -**  *Username* : Amit, *Password* : amit@789
  
 ## Prerequisites & Installation Steps
 
