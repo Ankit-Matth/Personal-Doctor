@@ -78,50 +78,6 @@ The **ChatGPT API** is our secret weapon for intelligent interactions. It's a st
 3. Cosmofeed (Payment Gateway) - Used for Online Payments
 
 As a beginner with time constraints due to university exams, this approach allows us to rapidly integrate essential features without delving into extensive coding. However, these can be easily implemented by using simple Javascript libarires like WebRTC, socket.io etc.
- 
-## Prerequisites & Installation Steps
-
-Follow these steps to set up the project on your local machine:
-
-1. **Download Node.js:** Ensure you have the latest version of Node.js installed.
-
-2. **Clone the Repository:** Run the following command in your terminal:
-    ```bash
-    git clone https://github.com/Ankit-Matth/Personal-Doctor.git
-    ```
-3. **Navigate to the Project Directory:**
-    ```bash
-    cd Personal-Doctor
-    ```
-4. **Configure API Key in the .env File:**
-
-   Open the *.env* file in the root directory and look for the line that says `KEY=<API Key>` and replace the `<API Key>` with the actual API key you obtained from the Open AI. I am not providing my API key directly here because it goes against the guidelines set by OPEN AI. (OPEN AI detects my key and blocks it due to the reason that I expose it in public.)
-
-   **Note:** If you don't have an API key, kindly email me at ankitmatth101@gmail.com, and I will provide it to you personally. Alternatively, you may replace it with a dummy API key (**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**) to bypass a specific feature, namely the ability to search for information about the uses of medicines.
-
-6. **Install Dependencies:**
-    ```bash
-    npm install
-    ```
-
-7. **Run server:**
-    ```bash
-    npm start
-    ```
-
-8. **View Output:**
-   Open your browser and go to [http://localhost:8089/](http://localhost:8089/) to see the output.
-
-9. **Development Mode:**
-    ```bash
-    npm run dev
-    ```
-   This command starts the project in development mode using nodemon.
-
-**Note:** The main backend code is located in the `app.js` file, serving as the core of our project. To run it directly, run the following command in your terminal:
-```bash
-node src/app.js
-```
 
 ## Features provided by us
 
